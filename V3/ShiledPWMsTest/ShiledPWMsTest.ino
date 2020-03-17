@@ -140,14 +140,14 @@ void writePwmsValue(uint16_t *rgb, uint8_t index) {
     RGBfinal[p] = (uint16_t) ((double)rgb[p]*currentBrightness / 255.0);
     pwm.setPWM(ShieldPwms[3*index + p], 0, RGBfinal[p]);
   }
-/*
+
   if(index==1) {
           Serial.print(RGBfinal[0]);
           Serial.print(", ");
           Serial.print(RGBfinal[1]);
           Serial.print(", ");
           Serial.println(RGBfinal[2]);
-  }*/
+  }
 }
 
 void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
@@ -175,7 +175,7 @@ void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
       ChangeCalc = false;
       fadeInCalc = false;
       fadeOutCalc = false;
-      for(j=0; j<6; j++) {
+      for(j=0; j<5; j++) {
         if(AnToPWMOn[j] == true && AnToPWMOnOld[j] == false) {
           //FADE IN
           if(!fadeInCalc) {
@@ -193,20 +193,26 @@ void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
           if(!ChangeCalc) {
             for(k=0; k<3; k++) { 
               if( directionSwitch[k] ) {
-                if(calcRGB[k] <= setRGB[k]+1) {
+                if(calcRGB[k] <= setRGB[k]) {
                   calcVal = (double)(pow(i,2)/(double)FadeMAXVALUEPWM2);
                   calcRGB[k] = currentRGBpwm[k] + calcVal*(setRGB[k]-currentRGBpwm[k]);
+                  //if(k==1 && j == 0) Serial.println(calcVal+3);
                 }
               } else {
-                 if(calcRGB[k] >= setRGB[k]-1) {
+                 if(calcRGB[k] >= setRGB[k]) {
                   calcVal = (double)(pow((FadeMAXVALUEPWM)-i+FadeMINVALUEPWM,2)/(double)FadeMAXVALUEPWM2);
                   calcRGB[k] = (uint16_t) (setRGB[k] + calcVal*(double)(currentRGBpwm[k]-setRGB[k]));
+                  //if(k==1 && j == 0) Serial.println(calcVal);
                 }
               }
               if(j==0 && k == 1) {
-                Serial.print(calcRGB[k]);
-                Serial.print(", ");
-                Serial.println(setRGB[k]);
+                //Serial.println(directionSwitch[k]); // 0,1,0,1
+                /*Serial.print(", ");
+                Serial.print(calcRGB[k]); // 
+                Serial.print(", ");*/
+                //Serial.println(setRGB[k]); // 0,4000,0,4000
+                //Serial.println(calcRGB[k]);  // 4000, nahoru, 4000, nahoru
+                //Serial.println(calcVal);
               }
             
             } 
@@ -230,25 +236,7 @@ void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
         } else {
           for(uint8_t p=0;p<3;p++) RGBfinal[p] = 0;
         }
-        //Aplikace brightness
-        //for(uint8_t p=0;p<3;p++) RGBfinal[p] = (uint16_t) ((double)RGBfinal[p]*currentBrightness / 255.0);
-        if(j==1) {/*
-          Serial.print(RGBfinal[0]);
-          Serial.print(", ");
-          Serial.print(RGBfinal[1]);
-          Serial.print(", ");
-          Serial.println(RGBfinal[2]);*/
-          /*Serial.print(setRGB[0]);
-          Serial.print(", ");
-          Serial.print(setRGB[1]);
-          Serial.print(", ");
-          Serial.println(setRGB[2]);*/
-        }/*
-        pwm.setPWM(ShieldPwms[3*j  ], 0, RGBfinal[0]);
-        pwm.setPWM(ShieldPwms[3*j+1], 0, RGBfinal[1]);
-        pwm.setPWM(ShieldPwms[3*j+2], 0, RGBfinal[2]);*/
       }
-      
       delay(5);
    }
    for(i=0; i<4; i++) {

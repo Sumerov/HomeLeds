@@ -227,12 +227,12 @@ void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
           if(!ChangeCalc) {
             for(k=0; k<3; k++) { 
               if( directionSwitch[k] ) {
-                if(calcRGB[k] <= setRGB[k]+1) {
+                if(calcRGB[k] <= setRGB[k]) {
                   calcVal = (double)(pow(i,2)/(double)FadeMAXVALUE2);
                   calcRGB[k] = currentRGB[k] + calcVal*(setRGB[k]-currentRGB[k]);
                 }
               } else {
-                 if(calcRGB[k] >= setRGB[k]-1) {
+                 if(calcRGB[k] >= setRGB[k]) {
                   calcVal = (double)(pow((FadeMAXVALUE)-i+FadeMINVALUE,2)/(double)FadeMAXVALUE2);
                   calcRGB[k] = (uint8_t) (setRGB[k] + calcVal*(double)(currentRGB[k]-setRGB[k]));
                 }
@@ -267,13 +267,21 @@ void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
    currentRGB[2] = blue;  
 }
 
+void writePwmsValue(uint16_t *rgb, uint8_t index) {
+  uint16_t RGBfinal[] = {0,0,0};
+  for(uint8_t p=0;p<3;p++) {
+    RGBfinal[p] = (uint16_t) ((double)rgb[p]*currentBrightness / 255.0);
+    pwm.setPWM(ShieldPwms[3*index + p], 0, RGBfinal[p]);
+  }
+}
+
 void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
   bool LCDRefreshRows[] = {0,0,1,1};
   debugLCD(LCDRefreshRows, true);
   uint16_t RGBfadeIn[] = {0, 0, 0};
   uint16_t RGBfadeOut[] = {0, 0, 0};
   uint16_t calcRGB[] = {currentRGBpwm[0], currentRGBpwm[1], currentRGBpwm[2]};
-  uint16_t setRGB[] = {red*SHIELDPWMMAX/255.0, green*SHIELDPWMMAX/255.0, blue*SHIELDPWMMAX/255.0};
+  uint16_t setRGB[] = {(double)red*SHIELDPWMMAX/255.0, (double)green*SHIELDPWMMAX/255.0, (double)blue*SHIELDPWMMAX/255.0};
   uint16_t RGBfinal[] = {0, 0, 0};
   bool fadeInCalc = false;
   bool fadeOutCalc = false;
@@ -292,59 +300,54 @@ void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
       ChangeCalc = false;
       fadeInCalc = false;
       fadeOutCalc = false;
-      for(j=0; j<6; j++) {
+      for(j=0; j<5; j++) {
         if(AnToPWMOn[j] == true && AnToPWMOnOld[j] == false) {
           //FADE IN
           if(!fadeInCalc) {
             calcVal = (double)(pow(i,2)/(double)FadeMAXVALUEPWM2);
             if(calcVal < 0.05) continue;
-            RGBfadeIn[0] = (uint8_t) (calcVal*(double)setRGB[0]);
-            RGBfadeIn[1] = (uint8_t) (calcVal*(double)setRGB[1]);
-            RGBfadeIn[2] = (uint8_t) (calcVal*(double)setRGB[2]);
+            RGBfadeIn[0] = (uint16_t) (calcVal*(double)setRGB[0]);
+            RGBfadeIn[1] = (uint16_t) (calcVal*(double)setRGB[1]);
+            RGBfadeIn[2] = (uint16_t) (calcVal*(double)setRGB[2]);
             fadeInCalc = true;
           }  
           // Vykresleni Fade In 
-          for(uint8_t p=0;p<3;p++) RGBfinal[p] = RGBfadeOut[p];
+          writePwmsValue(RGBfadeIn, j);
         } else if(AnToPWMOn[j] == true) { 
           //Change new
           if(!ChangeCalc) {
             for(k=0; k<3; k++) { 
               if( directionSwitch[k] ) {
-                if(calcRGB[k] <= setRGB[k]+1) {
+                if(calcRGB[k] <= setRGB[k]) {
                   calcVal = (double)(pow(i,2)/(double)FadeMAXVALUEPWM2);
                   calcRGB[k] = currentRGBpwm[k] + calcVal*(setRGB[k]-currentRGBpwm[k]);
                 }
               } else {
-                 if(calcRGB[k] >= setRGB[k]-1) {
+                 if(calcRGB[k] >= setRGB[k]) {
                   calcVal = (double)(pow((FadeMAXVALUEPWM)-i+FadeMINVALUEPWM,2)/(double)FadeMAXVALUEPWM2);
-                  calcRGB[k] = (uint8_t) (setRGB[k] + calcVal*(double)(currentRGBpwm[k]-setRGB[k]));
+                  calcRGB[k] = (uint16_t) (setRGB[k] + calcVal*(double)(currentRGBpwm[k]-setRGB[k]));
                 }
               }
             } 
             ChangeCalc = true;
           }
-          // Vykresleni Change Color 
-          for(uint8_t p=0;p<3;p++) RGBfinal[p] = RGBfadeOut[p];
+          writePwmsValue(calcRGB, j); // Vykresleni Change Color 
         } else if(AnToPWMOnOld[j] == true) { 
           //FADE OUT
           if(!fadeOutCalc) {
             calcVal = (double)(pow((FadeMAXVALUEPWM)-i+FadeMINVALUEPWM,2)/(double)FadeMAXVALUEPWM2);
             if(calcVal > 1) calcVal = 1;
             if(calcVal < 0.05) calcVal = 0;
-            RGBfadeOut[0] = (uint8_t) (calcVal*(double)currentRGBpwm[0]);
-            RGBfadeOut[1] = (uint8_t) (calcVal*(double)currentRGBpwm[1]);
-            RGBfadeOut[2] = (uint8_t) (calcVal*(double)currentRGBpwm[2]);
+            RGBfadeOut[0] = (uint16_t) (calcVal*(double)currentRGBpwm[0]);
+            RGBfadeOut[1] = (uint16_t) (calcVal*(double)currentRGBpwm[1]);
+            RGBfadeOut[2] = (uint16_t) (calcVal*(double)currentRGBpwm[2]);
             fadeOutCalc = true;
           }
-          // Vykresleni Fade Out
-          for(uint8_t p=0;p<3;p++) RGBfinal[p] = RGBfadeOut[p];
-        } 
+          writePwmsValue(RGBfadeOut, j); // Vykresleni Fade Out
+        } else {
+          for(uint8_t p=0;p<3;p++) RGBfinal[p] = 0;
+        }
       }
-      //Aplikace brightness
-      for(uint8_t p=0;p<3;p++) RGBfinal[p] *= (uint16_t) ((double)currentBrightness / 255.0);
-      pwm.setPWM(ShieldPwms[3*j  ], 0, RGBfinal[0]);
-      pwm.setPWM(ShieldPwms[3*j+1], 0, RGBfinal[1]);
-      pwm.setPWM(ShieldPwms[3*j+2], 0, RGBfinal[2]);
       delay(5);
    }
    for(i=0; i<4; i++) {

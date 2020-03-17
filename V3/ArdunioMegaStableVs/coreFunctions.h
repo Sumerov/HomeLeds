@@ -28,6 +28,7 @@ void introSetup();
 void getAnalogValues(bool controlOn);
 bool getBooleansFromAn(uint8_t **control, uint8_t pos, uint8_t pos2, uint8_t *sizes);
 void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset);
+void writePwmsValue(uint16_t *rgb, uint8_t index);
 void fadeTooglePwm(uint8_t red, uint8_t green, uint8_t blue);
 void brightnessSet();
 void controlCheckOut();
