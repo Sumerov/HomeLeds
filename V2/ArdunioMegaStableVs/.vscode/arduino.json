@@ -1,0 +1,8 @@
+{
+    "sketch": "ArdunioMegaStableVs.ino",
+    "board": "arduino:avr:mega",
+    "configuration": "cpu=atmega2560",
+    "output": ".\\build",
+    "programmer": "AVRISP mkII",
+    "port": "COM4"
+}
