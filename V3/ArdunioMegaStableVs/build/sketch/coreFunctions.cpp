@@ -368,15 +368,15 @@ void analogCheckOut() {
       bool LCDRefreshRows[] = {0,0,1,1};
       debugLCD(LCDRefreshRows, true);
       switch(i) {
-        case 0: {
+        case 0: { //PLEDS
           value = (double) pow(AnVal[2], 3) / pow(242, 3) * 255.0; 
           if(value > 255) value = 255;
           brightness = value;
           FastLED.setBrightness(  brightness  );
-          fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], true);
+          fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 500, true);
           break;
         }
-        case 1: {           
+        case 1: { //PWMLEDS        
           for(uint8_t j = 0; j<16; j++) {
             pwm.setPWM(j, 0, 0);
           }
@@ -403,7 +403,7 @@ void analogCheckOut() {
           }
           break;
         }
-        case 2: { 
+        case 2: { // brightness
           value = (double) pow(AnVal[2], 3) / pow(242, 3) * 255.0; 
           if(value > 255) value = 255;
           brightness = value;

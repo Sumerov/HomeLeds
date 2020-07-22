@@ -10,7 +10,6 @@ bool AnToLedsOnOld[] = {false, false, false, false};
 bool AnToPWMOn[] = {false, false, false, false, false};
 bool AnToPWMOnOld[] = {false, false, false, false, false};
 
-
 // Leva leva, stred, prava stred, prava leva, prava prava
 uint8_t ShieldPwms[] = {14, 13, 12, 4, 5, 6 , 8, 9, 10, 0, 1, 2, 3, 7, 11};
 uint8_t ShieldPwmsVals[] = {0, 0, 0, SHIELDPWMMAX*SHIELDPWMMAXDUTY/10.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -19,6 +18,7 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x40);
 uint8_t newRGB[] = {240,240,60};
 uint8_t currentRGB[] = {240,240,60};
 uint16_t currentRGBpwm[] = {3765,3765,940};
+uint16_t MaxTValue = 500;
 
 uint8_t ledsLenght[] = {NUM_LEDS_LEFT, NUM_LEDS_MID, NUM_LEDS_MON, NUM_LEDS_RIGHT};
 CRGB ledsLeft[NUM_LEDS_LEFT];
@@ -47,12 +47,6 @@ uint8_t R2controlSizes[] = {getAS(PWMLeft), getAS(PWMMid), getAS(PWMRLeft), getA
 uint8_t AnValSizes[] = {getAS(AnToLedsOn), getAS(AnToPWMOn), 0, 0};
 bool AnChanged = false;
 
-extern uint8_t brightness;
-extern uint8_t currentBrightness;
-extern bool controlBools[];
-extern uint8_t controlVal;
-extern bool controlOn;
-
 void showStrip() {
  #ifdef ADAFRUIT_NEOPIXEL_H
    // NeoPixel
@@ -65,6 +59,12 @@ void showStrip() {
 }
 
 void introSetup() {
+  pwm.begin();
+  for(uint8_t j = 0; j<16; j++) {
+      pwm.setPWM(j, 0, 0);
+  }
+  delay(100);
+
   double value = 0;
   for(uint16_t i=0; i < SHIELDPWMMAX; i+=16) {
     value = (double)pow(i, 3)/(double)SHIELDPWMMAXPOW * (double)SHIELDPWMMAXDUTY / 100.0;
@@ -76,15 +76,27 @@ void introSetup() {
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = true; 
   brightness = 200;
   FastLED.setBrightness( brightness );
-  fadeToogleToColor(245, 245, 245, false);
-  delay(1000);
-  fadeToogleToColor(245, 0, 0, false);
+  fadeToogleToColor(245, 245, 245, 500, false);
+  for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = false;
   delay(500);
-  fadeToogleToColor(0, 245, 0, false);
-  delay(500);
-  fadeToogleToColor(0, 0, 245, false);
-  delay(500);
-  fadeToogleToColor(245, 245, 60, false);
+  fadeToogleToColor(240, 240, 60, 1500, false);
+  
+  for(int16_t i=SHIELDPWMMAX/2; i > 0; i-=16) {
+    value = (double)pow(i, 3)/(double)SHIELDPWMMAXPOW * (double)SHIELDPWMMAXDUTY / 100.0;
+    for(uint16_t j = 0; j<15; j++) {
+      if(j == 3) continue;
+      pwm.setPWM(ShieldPwms[j], 0, value/2);
+    }
+    delay(2);
+  }  
+
+  /* 
+  fadeToogleToColor(245, 245, 245, 500, false);
+  fadeToogleToColor(245, 0, 0, 500, false);
+  fadeToogleToColor(0, 245, 0, 500, false);
+  fadeToogleToColor(0, 0, 245, 500, false);
+  fadeToogleToColor(245, 245, 60, 500, false);
+  
   delay(500); 
   for(int16_t i=SHIELDPWMMAX; i > 0; i-=16) {
     value = (double)pow(i, 3)/(double)SHIELDPWMMAXPOW * (double)SHIELDPWMMAXDUTY / 100.0;
@@ -95,7 +107,8 @@ void introSetup() {
     delay(2);
   }  
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = false;
-  fadeToogleToColor(240, 240, 60, false);
+  fadeToogleToColor(240, 240, 60, 500, false);
+  */
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = false;
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOnOld[i] = false;
 } 
@@ -186,8 +199,10 @@ bool getBooleansFromAn(uint8_t **control, uint8_t pos, uint8_t pos2, uint8_t *si
     return false;
 }
 
-void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
+void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, uint16_t maxValue, bool reset) {
   bool LCDRefreshRows[] = {0,0,1,1};
+  MaxTValue = maxValue;
+  uint32_t FadeMaxValue2 = maxValue*maxValue;
   debugLCD(LCDRefreshRows, true);
   uint8_t RGBfadeIn[] = {0, 0, 0};
   uint8_t RGBfadeOut[] = {0, 0, 0};
@@ -206,7 +221,7 @@ void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
     directionSwitch[k] = (calcRGB[k] <= setRGB[k]) ? true:false;  
   }
   
-  for(i=FadeMINVALUE; i<FadeMAXVALUE; i+=5) {
+  for(i=FadeMINVALUE; i < maxValue; i+=5) {
       ChangeCalc = false;
       fadeInCalc = false;
       fadeOutCalc = false;
@@ -214,7 +229,7 @@ void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
         if(AnToLedsOn[j] == true && AnToLedsOnOld[j] == false) {
           //FADE IN
           if(!fadeInCalc) {
-            calcVal = (double)(pow(i,2)/(double)FadeMAXVALUE2);
+            calcVal = (double)(pow(i,2)/(double)FadeMaxValue2);
             if(calcVal < 0.05) continue;
             RGBfadeIn[0] = (uint8_t) (calcVal*(double)red);
             RGBfadeIn[1] = (uint8_t) (calcVal*(double)green);
@@ -228,12 +243,12 @@ void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
             for(k=0; k<3; k++) { 
               if( directionSwitch[k] ) {
                 if(calcRGB[k] <= setRGB[k]) {
-                  calcVal = (double)(pow(i,2)/(double)FadeMAXVALUE2);
+                  calcVal = (double)(pow(i,2)/(double)FadeMaxValue2);
                   calcRGB[k] = currentRGB[k] + calcVal*(setRGB[k]-currentRGB[k]);
                 }
               } else {
                  if(calcRGB[k] >= setRGB[k]) {
-                  calcVal = (double)(pow((FadeMAXVALUE)-i+FadeMINVALUE,2)/(double)FadeMAXVALUE2);
+                  calcVal = (double)(pow((maxValue)-i+FadeMINVALUE,2)/(double)FadeMaxValue2);
                   calcRGB[k] = (uint8_t) (setRGB[k] + calcVal*(double)(currentRGB[k]-setRGB[k]));
                 }
               }
@@ -244,7 +259,7 @@ void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, bool reset) {
         } else if(AnToLedsOnOld[j] == true) { 
           //FADE OUT
           if(!fadeOutCalc) {
-            calcVal = (double)(pow((FadeMAXVALUE)-i+FadeMINVALUE,2)/(double)FadeMAXVALUE2);
+            calcVal = (double)(pow((maxValue)-i+FadeMINVALUE,2)/(double)FadeMaxValue2);
             if(calcVal > 1) calcVal = 1;
             if(calcVal < 0.05) calcVal = 0;
             RGBfadeOut[0] = (uint8_t) (calcVal*(double)currentRGB[0]);
@@ -381,12 +396,12 @@ void controlCheckOut() {
               AnToPWMOn[i] = false;
             }
             AnToPWMOn[4] = false;
-            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], true);
+            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 500, true);
             break;
           }
           case 1: { // rgbChanged
             for(uint8_t i=0; i<4; i++) { AnToLedsOn[i] = AnToLedsOnOld[i]; }
-            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], true);
+            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 500, true);
             controlOn = false;
             break;
           }
@@ -395,7 +410,7 @@ void controlCheckOut() {
             break;
           }
           case 3: { // segmentChanged
-            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], true);
+            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 500, true);
           }
           case 4: { // segmentChanged
             // PWMs
@@ -429,7 +444,7 @@ void analogCheckOut() {
           if(value > 255) value = 255;
           brightness = value;
           FastLED.setBrightness(  brightness  );
-          fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], true);
+          fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 500, true);
           break;
         }
         case 1: {           

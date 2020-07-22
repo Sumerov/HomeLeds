@@ -1,23 +1,11 @@
 #include "lcdFunctions.h"
 
+
 LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 20, 4);
 uint8_t LCDcursor = 0;
-
-extern uint8_t AnVal[];
-extern uint8_t brightness;
-extern uint8_t currentBrightness;
-extern bool AnToLedsOn[];
-extern bool AnToPWMOn[];
-extern bool AnToLedsOnOld[];
-extern bool AnToPWMOnOld[];
-extern uint8_t controlVal;
-extern bool debugLCDswitch;
-extern bool backlightLCDswitch;
-bool backlightChanged = false;
-
 char *string_table[] = {
                   "|>Brightness: ",
-                  "|>ControlVal: ",
+                  "|>CVal: ",
                   "|>Pleds:  ",
                   "|> PWMs: ",
                   "|> A0/A1: ",
@@ -25,6 +13,7 @@ char *string_table[] = {
                   };
 char buffer1[21];
 char buffer2[12]; 
+bool backlightChanged = false;
 
 void fillUpDisplay(char endSymbol[2]) {
   uint8_t strCount = strlen(buffer1);  
@@ -49,6 +38,12 @@ void debugLCD(bool refreshRows[4], bool oldOrNew) {
           sprintf(buffer2, "%d", currentBrightness);
           break;
         } 
+        case 1: {
+          if(controlVal<10) sprintf(buffer2, "%d  T:%d", controlVal, MaxTValue);
+          else if(controlVal<100) sprintf(buffer2, "%d T:%d", controlVal, MaxTValue);
+          else sprintf(buffer2, "%d T:%d", controlVal, MaxTValue);
+          break;
+        }   
         case 2: {
           if(debugLCDswitch) {
             if(AnVal[0]<10) sprintf(buffer2, "  %d/%d", AnVal[0], AnVal[1]);
@@ -71,11 +66,7 @@ void debugLCD(bool refreshRows[4], bool oldOrNew) {
             if(oldOrNew) sprintf(buffer2, "%d|%d|%d|%d|%d", AnToPWMOn[0], AnToPWMOn[1], AnToPWMOn[2], AnToPWMOn[3], AnToPWMOn[4]);
             else sprintf(buffer2, "%d|%d|%d|%d|%d", AnToPWMOnOld[0], AnToPWMOnOld[1], AnToPWMOnOld[2], AnToPWMOnOld[3], AnToPWMOnOld[4]);
           break;
-        } 
-        case 1: {
-          sprintf(buffer2, "%d", controlVal);
-          break;
-        }       
+        }    
       }
       if((i==2 || i==3) && debugLCDswitch) {
         strcpy(buffer1, string_table[i+2]);

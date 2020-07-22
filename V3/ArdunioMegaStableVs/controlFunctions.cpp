@@ -12,10 +12,7 @@ bool backlightLCDswitch = false;
 bool runLCD = false;
 // {turnOff, rgbChanged, brightnessChanged, segmentChangeLeds, segmentChangePwms}
 bool controlBools[] = {false, false, false, false, false};
-extern bool AnToLedsOn[];
-extern bool AnToPWMOn[];
-extern bool AnToLedsOnOld[];
-extern bool AnToPWMOnOld[];
+
     
 
 uint32_t getIrValue() {

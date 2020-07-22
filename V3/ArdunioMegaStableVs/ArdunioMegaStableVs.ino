@@ -48,11 +48,7 @@ void setup() {
   controllers[3] = &FastLED.addLeds<WS2812B, 9, GRB>(ledsRight, NUM_LEDS_RIGHT).setCorrection( TypicalLEDStrip );
   FastLED.setBrightness(  brightness  );
   currentBrightness = brightness;
-  pwm.begin();
-  for(uint8_t j = 0; j<16; j++) {
-      pwm.setPWM(j, 0, 0);
-  }
-  delay(1000);
+  
   Serial.println("Setup done...");
   introSetup();
   Serial.println("Loop starting...");
@@ -63,6 +59,7 @@ void setup() {
 uint32_t IRvalue = 0;
 int16_t value;
 bool controlApplied = false;
+
 void loop() {
   if (irrecv.decode(&results)) {
     IRvalue = getIrValue();
