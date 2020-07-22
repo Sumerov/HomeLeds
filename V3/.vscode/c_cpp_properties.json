@@ -4,10 +4,13 @@
             "name": "Win32",
             "includePath": [
                 "D:\\PROGRAMY\\Arduino\\tools\\**",
-                "D:\\PROGRAMY\\Arduino\\hardware\\arduino\\avr\\**"
+                "D:\\PROGRAMY\\Arduino\\hardware\\arduino\\avr\\**",
+                "C:\\Users\\Sumerov\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.1\\**",
+                "C:\\Users\\Sumerov\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**"
             ],
             "forcedInclude": [
-                "D:\\PROGRAMY\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+                "D:\\PROGRAMY\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h",
+                "C:\\Users\\Sumerov\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.1\\cores\\arduino\\Arduino.h"
             ],
             "intelliSenseMode": "msvc-x64"
         }

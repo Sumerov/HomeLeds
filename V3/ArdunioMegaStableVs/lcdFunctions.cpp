@@ -4,10 +4,10 @@
 LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 20, 4);
 uint8_t LCDcursor = 0;
 char *string_table[] = {
-                  "|>Brightness: ",
-                  "|>CVal: ",
-                  "|>Pleds:  ",
-                  "|> PWMs: ",
+                  "|>Brss:",
+                  "|>CVal:",
+                  "|>Pled:   ",
+                  "|> PWM:  ",
                   "|> A0/A1: ",
                   "|> A2/A3: "
                   };
@@ -35,12 +35,15 @@ void debugLCD(bool refreshRows[4], bool oldOrNew) {
       lcd.setCursor(0, i); 
       switch(i) {
         case 0: {
-          sprintf(buffer2, "%d", currentBrightness);
+          if(currentBrightness<10) sprintf(buffer2, " %d", currentBrightness);
+          else if(currentBrightness<100) sprintf(buffer2, " %d", currentBrightness);
+          else sprintf(buffer2, "%d", currentBrightness);
+          
           break;
         } 
         case 1: {
-          if(controlVal<10) sprintf(buffer2, "%d  T:%d", controlVal, MaxTValue);
-          else if(controlVal<100) sprintf(buffer2, "%d T:%d", controlVal, MaxTValue);
+          if(controlVal<10) sprintf(buffer2, " %d  T:%d", controlVal, MaxTValue);
+          else if(controlVal<100) sprintf(buffer2, " %d T:%d", controlVal, MaxTValue);
           else sprintf(buffer2, "%d T:%d", controlVal, MaxTValue);
           break;
         }   

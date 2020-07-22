@@ -199,10 +199,10 @@ bool getBooleansFromAn(uint8_t **control, uint8_t pos, uint8_t pos2, uint8_t *si
     return false;
 }
 
-void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, uint16_t maxValue, bool reset) {
+void fadeToogleToColor(uint8_t red, uint8_t green, uint8_t blue, int16_t maxValue, bool reset) {
   bool LCDRefreshRows[] = {0,0,1,1};
   MaxTValue = maxValue;
-  uint32_t FadeMaxValue2 = maxValue*maxValue;
+  double FadeMaxValue2 = (double)maxValue*(double)maxValue;
   debugLCD(LCDRefreshRows, true);
   uint8_t RGBfadeIn[] = {0, 0, 0};
   uint8_t RGBfadeOut[] = {0, 0, 0};
