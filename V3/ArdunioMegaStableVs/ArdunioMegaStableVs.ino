@@ -41,7 +41,7 @@ void setup() {
   lcd.setBacklight(1);
   setupLCD();
   
-  Serial.begin(9600);
+  Serial.begin(115200);
   controllers[0] = &FastLED.addLeds<WS2812B, 6, GRB>(ledsLeft, NUM_LEDS_LEFT).setCorrection( TypicalLEDStrip );
   controllers[1] = &FastLED.addLeds<WS2812B, 10, GRB>(ledsMid, NUM_LEDS_MID).setCorrection( TypicalLEDStrip );
   controllers[2] = &FastLED.addLeds<WS2812B, 11, GRB>(ledsMon, NUM_LEDS_MON).setCorrection( TypicalLEDStrip );
@@ -62,7 +62,7 @@ bool controlApplied = false;
 
 void loop() {
   if (irrecv.decode(&results)) {
-    IRvalue = getIrValue();
+    IRvalue = IRdecodeType();
     controlOn = getControlValue(IRvalue);
     if(controlOn) controlOn = getControlAction(newRGB);
     bool LCDRefreshRows[] = {0,1,0,0};

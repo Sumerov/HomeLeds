@@ -74,43 +74,41 @@ void introSetup() {
     delay(2);
   }
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = true; 
-  brightness = 200;
-  FastLED.setBrightness( brightness );
-  fadeToogleToColor(245, 245, 245, 500, false);
+
+  FastLED.setBrightness( 200 );
+  fadeToogleToColor(245, 245, 245, 200, false);
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = false;
   delay(500);
-  fadeToogleToColor(240, 240, 60, 1500, false);
-  
-  for(int16_t i=SHIELDPWMMAX/2; i > 0; i-=16) {
-    value = (double)pow(i, 3)/(double)SHIELDPWMMAXPOW * (double)SHIELDPWMMAXDUTY / 100.0;
-    for(uint16_t j = 0; j<15; j++) {
-      if(j == 3) continue;
-      pwm.setPWM(ShieldPwms[j], 0, value/2);
-    }
-    delay(2);
-  }  
-
-  /* 
-  fadeToogleToColor(245, 245, 245, 500, false);
-  fadeToogleToColor(245, 0, 0, 500, false);
-  fadeToogleToColor(0, 245, 0, 500, false);
-  fadeToogleToColor(0, 0, 245, 500, false);
-  fadeToogleToColor(245, 245, 60, 500, false);
-  
-  delay(500); 
+  fadeToogleToColor(240, 240, 60, 1000, false);
+  delay(500);
   for(int16_t i=SHIELDPWMMAX; i > 0; i-=16) {
     value = (double)pow(i, 3)/(double)SHIELDPWMMAXPOW * (double)SHIELDPWMMAXDUTY / 100.0;
+    if(value<0) value = 0;
     for(uint16_t j = 0; j<15; j++) {
       if(j == 3) continue;
       pwm.setPWM(ShieldPwms[j], 0, value/2);
     }
     delay(2);
-  }  
-  for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = false;
-  fadeToogleToColor(240, 240, 60, 500, false);
-  */
+  } 
+  // RED only fadeout 
+  for(int16_t i=SHIELDPWMMAX; i > 0; i-=16) {
+    value = (double)pow(i, 3)/(double)SHIELDPWMMAXPOW * (double)SHIELDPWMMAXDUTY / 100.0;
+    if(value<0) value = 0;
+    pwm.setPWM(ShieldPwms[3], 0, value/2);
+    delay(2);
+  } 
+
+
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOn[i] = false;
   for(uint8_t i=0;i<4;i++) if(i!=1) AnToLedsOnOld[i] = false;
+
+  value = ((double) analogRead(Analogs[2])/1023.0 * 255.0); 
+  value = (double) pow(value, 3) / pow(242, 3) * 255.0; 
+  Serial.println(value);
+  if(value > 255) value = 255;
+  brightness = value;
+  currentBrightness = value;
+  FastLED.setBrightness( brightness );
 } 
 
 void getAnalogValues(bool controlOn) {
@@ -401,7 +399,7 @@ void controlCheckOut() {
           }
           case 1: { // rgbChanged
             for(uint8_t i=0; i<4; i++) { AnToLedsOn[i] = AnToLedsOnOld[i]; }
-            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 500, true);
+            fadeToogleToColor(newRGB[0], newRGB[1], newRGB[2], 100, true);
             controlOn = false;
             break;
           }

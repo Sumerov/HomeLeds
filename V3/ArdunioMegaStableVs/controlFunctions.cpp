@@ -13,48 +13,73 @@ bool runLCD = false;
 // {turnOff, rgbChanged, brightnessChanged, segmentChangeLeds, segmentChangePwms}
 bool controlBools[] = {false, false, false, false, false};
 
-    
-
-uint32_t getIrValue() {
-    uint64_t irVal = 0; 
-    for(int i=32+3; i<(results.rawlen-1); i++) {
-        int Delta = results.rawbuf[i] - results.rawbuf[i+1];
-        if (Delta < 0) Delta = -Delta;
-        uint8_t b = (Delta < IR_TOLERANCE) ? 0 : 1;
-        if ((i-3) < 63) {
-            irVal = irVal | ((int64_t)b << (int64_t)(i-3));
-        }
-    }
-    uint32_t x = irVal >> 32;
-    irrecv.resume(); // get the next signal 
-    return x;
+uint32_t IRdecodeType() { 
+  uint32_t value = 0;
+  switch (results.decode_type) {
+    case NEC: {
+      value = results.value;
+      break;     
+    }  
+    case PANASONIC: {
+      value = results.value;
+      break;
+    } 
+  }
+  
+  irrecv.resume();
+  return value;
 }
-
 
 bool getControlValue(uint32_t irValue) {
   bool value = true;
   Serial.println("//IR//");
   Serial.print("IRVal: ");
   Serial.print(irValue);
+  controlVal = 127;
+
+  //NEC
   switch(irValue) {
-    case 0: {controlVal = 127; value = false; break;}
-    case 1276064752: {controlVal = 2; break;} case 1275868147: {controlVal = 3; break;} case 1341927427: {controlVal = 1; break;} case 1342124032: {controlVal = 0; break;}
+    case 0: {controlVal = 127; /*value = false;*/ break;}
+    case 16726725: {controlVal = 2; break;} case 16759365: {controlVal = 3; break;} case 16745085: {controlVal = 1; break;} case 16712445: {controlVal = 0; break;}
     //Barvy
-    case 1279210432: {controlVal = 10; break;} case 1279013827: {controlVal = 20; break;} case 1338781747: {controlVal = 30; break;} case 1338978352: {controlVal = 40; break;}
-    case 1288647472: {controlVal = 11; break;} case 1288450867: {controlVal = 21; break;} case 1329344707: {controlVal = 31; break;} case 1329541312: {controlVal = 41; break;}
-    case 1291793152: {controlVal = 12; break;} case 1291596547: {controlVal = 22; break;} case 1326199027: {controlVal = 32; break;} case 1326395632: {controlVal = 42; break;}
-    case 2081358832: {controlVal = 13; break;} case 2081162227: {controlVal = 23; break;} case 2080572412: {controlVal = 33; break;} case 2080375807: {controlVal = 43; break;}
-    case 2084504512: {controlVal = 14; break;} case 2084307907: {controlVal = 24; break;} case 2083718092: {controlVal = 34; break;} case 2083521487: {controlVal = 44; break;}
+    case 16718565: {controlVal = 10; break;} case 16751205: {controlVal = 20; break;} case 16753245: {controlVal = 30; break;} case 16720605: {controlVal = 40; break;}
+    case 16722645: {controlVal = 11; break;} case 16755285: {controlVal = 21; break;} case 16749165: {controlVal = 31; break;} case 16716525: {controlVal = 41; break;}
+    case 16714485: {controlVal = 12; break;} case 16747125: {controlVal = 22; break;} case 16757325: {controlVal = 32; break;} case 16724685: {controlVal = 42; break;}
+    case 16726215: {controlVal = 13; break;} case 16758855: {controlVal = 23; break;} case 16742535: {controlVal = 33; break;} case 16775175: {controlVal = 43; break;}
+    case 16718055: {controlVal = 14; break;} case 16750695: {controlVal = 24; break;} case 16734375: {controlVal = 34; break;} case 16767015: {controlVal = 44; break;}
     //Sipky
-    case 2093941552: {controlVal = 18; break;} case 2093744947: {controlVal = 28; break;} case 2093155132: {controlVal = 38; break;} case 2092958527: {controlVal = 4; break;}
-    case 2097087232: {controlVal = 19; break;} case 2096890627: {controlVal = 29; break;} case 2096300812: {controlVal = 39; break;} case 2096104207: {controlVal = 5; break;}
+    case 16722135: {controlVal = 18; break;} case 16754775: {controlVal = 28; break;} case 16738455: {controlVal = 38; break;} case 16771095: {controlVal = 4; break;}
+    case 16713975: {controlVal = 19; break;} case 16746615: {controlVal = 29; break;} case 16730295: {controlVal = 39; break;} case 16762935: {controlVal = 5; break;}
     //DIY
-    case 2131689712: {controlVal = 80; break;} case 2131493107: {controlVal = 81; break;} case 2130903292: {controlVal = 82; break;} case 2130706687: {controlVal = 6; break;}
-    case 2134835392: {controlVal = 83; break;} case 2134638787: {controlVal = 84; break;} case 2134048972: {controlVal = 85; break;} case 2133852367: {controlVal = 7; break;}
+    case 16724175: {controlVal = 80; break;} case 16756815: {controlVal = 81; break;} case 16740495: {controlVal = 82; break;} case 16773135: {controlVal = 6; break;}
+    case 16716015: {controlVal = 83; break;} case 16748655: {controlVal = 84; break;} case 16732335: {controlVal = 85; break;} case 16764975: {controlVal = 7; break;}
     //MODY
-    case 2144272432: {controlVal = 90; break;} case 2144075827: {controlVal = 91; break;} case 2143486012: {controlVal = 92; break;} case 2143289407: {controlVal = 93; break;}
-    default: {controlVal = 127; value = false; break;}
+    case 16720095: {controlVal = 90; break;} case 16752735: {controlVal = 91; break;} case 16736415: {controlVal = 92; break;} case 16769055: {controlVal = 93; break;}
+    default: {controlVal = 127; /*value = false;*/ break;}
   }
+  if(controlVal == 127) {
+    //PANASONIC
+    switch(irValue) {
+      case 0: {controlVal = 127; value = false; break;}
+      //mixer
+      case 89161941: {controlVal = 2; break;} case 89129045: {controlVal = 3; break;} case 89153589: {controlVal = 1; break;} case 89149445: {controlVal = 0; break;}
+      //search x skip
+      case 89145365: {controlVal = 10; break;} case 89178261: {controlVal = 20; break;} case 89166535: {controlVal = 30; break;} case 89149959: {controlVal = 40; break;}
+      //Numbers
+      case 89131101: {controlVal = 11; break;} case 89163997: {controlVal = 21; break;} case 89147421: {controlVal = 31; break;} case 89180317: {controlVal = 41; break;}
+      case 89139325: {controlVal = 12; break;} case 89172221: {controlVal = 22; break;} case 89155645: {controlVal = 32; break;} case 89188541: {controlVal = 42; break;}
+      case 89135181: {controlVal = 13; break;} case 89170420: {controlVal = 23; break;} case 89137524: {controlVal = 33; break;} case 89168077: {controlVal = 43; break;}
+      //Menu
+      case 89149700: {controlVal = 14; break;} case 89129300: {controlVal = 24; break;} case 89162196: {controlVal = 34; break;} case 89172735: {controlVal = 44; break;}
+      //Options
+      case 89133639: {controlVal = 18; break;} case 89186999: {controlVal = 28; break;} case 89174759: {controlVal = 38; break;} case 89182596: {controlVal = 4; break;}
+      case 89162961: {controlVal = 19; break;} case 89130065: {controlVal = 29; break;} case 89183616: {controlVal = 39; break;} case 89142624: {controlVal = 5; break;}
+      //Peak search
+      case 89190820: {controlVal = 80; break;} 
+      default: {if(controlVal == 127 ){ controlVal = 127;value = false;} break;}
+    }
+  }
+
   Serial.print(" => controlVal : ");
   Serial.println(controlVal);
   Serial.println("////==////");
