@@ -1,0 +1,1063 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 8150 700  0    50   Input ~ 0
+LED01
+Wire Wire Line
+	8150 700  8200 700 
+Wire Wire Line
+	8200 700  8200 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5F2774EC
+P 8200 1150
+F 0 "#PWR?" H 8200 900 50  0001 C CNN
+F 1 "GND" H 8205 977 50  0000 C CNN
+F 2 "" H 8200 1150 50  0001 C CNN
+F 3 "" H 8200 1150 50  0001 C CNN
+	1    8200 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 950  7600 950 
+Text GLabel 7550 950  0    50   Input ~ 0
+D01
+$Comp
+L Device:C_Small C?
+U 1 1 5F51B093
+P 7900 1050
+F 0 "C?" H 7700 1050 50  0000 L CNN
+F 1 "C_Small" H 7500 950 50  0000 L CNN
+F 2 "" H 7900 1050 50  0001 C CNN
+F 3 "~" H 7900 1050 50  0001 C CNN
+	1    7900 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F271720
+P 8100 950
+F 0 "Q?" H 8307 996 50  0000 L CNN
+F 1 "TIP120" H 8307 905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8100 950 50  0001 L CNN
+	1    8100 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1150 8200 1150
+Connection ~ 8200 1150
+Connection ~ 7900 950 
+$Comp
+L Device:R R?
+U 1 1 5F2759A8
+P 7750 950
+F 0 "R?" V 7957 950 50  0000 C CNN
+F 1 "3k3" V 7866 950 50  0000 C CNN
+F 2 "" V 7680 950 50  0001 C CNN
+F 3 "~" H 7750 950 50  0001 C CNN
+	1    7750 950 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9400 700  0    50   Input ~ 0
+LED02
+Wire Wire Line
+	9400 700  9450 700 
+Wire Wire Line
+	9450 700  9450 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5F53A46A
+P 9450 1150
+F 0 "#PWR?" H 9450 900 50  0001 C CNN
+F 1 "GND" H 9455 977 50  0000 C CNN
+F 2 "" H 9450 1150 50  0001 C CNN
+F 3 "" H 9450 1150 50  0001 C CNN
+	1    9450 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 950  8850 950 
+Text GLabel 8800 950  0    50   Input ~ 0
+D02
+$Comp
+L Device:C_Small C?
+U 1 1 5F53A472
+P 9150 1050
+F 0 "C?" H 8950 1050 50  0000 L CNN
+F 1 "C_Small" H 8750 950 50  0000 L CNN
+F 2 "" H 9150 1050 50  0001 C CNN
+F 3 "~" H 9150 1050 50  0001 C CNN
+	1    9150 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F53A478
+P 9350 950
+F 0 "Q?" H 9557 996 50  0000 L CNN
+F 1 "TIP120" H 9557 905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9550 875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 950 50  0001 L CNN
+	1    9350 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1150 9450 1150
+Connection ~ 9450 1150
+Connection ~ 9150 950 
+$Comp
+L Device:R R?
+U 1 1 5F53A481
+P 9000 950
+F 0 "R?" V 9207 950 50  0000 C CNN
+F 1 "3k3" V 9116 950 50  0000 C CNN
+F 2 "" V 8930 950 50  0001 C CNN
+F 3 "~" H 9000 950 50  0001 C CNN
+	1    9000 950 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10650 700  0    50   Input ~ 0
+LED03
+Wire Wire Line
+	10650 700  10700 700 
+Wire Wire Line
+	10700 700  10700 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5F53CC6C
+P 10700 1150
+F 0 "#PWR?" H 10700 900 50  0001 C CNN
+F 1 "GND" H 10705 977 50  0000 C CNN
+F 2 "" H 10700 1150 50  0001 C CNN
+F 3 "" H 10700 1150 50  0001 C CNN
+	1    10700 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 950  10100 950 
+Text GLabel 10050 950  0    50   Input ~ 0
+D03
+$Comp
+L Device:C_Small C?
+U 1 1 5F53CC74
+P 10400 1050
+F 0 "C?" H 10200 1050 50  0000 L CNN
+F 1 "C_Small" H 10000 950 50  0000 L CNN
+F 2 "" H 10400 1050 50  0001 C CNN
+F 3 "~" H 10400 1050 50  0001 C CNN
+	1    10400 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F53CC7A
+P 10600 950
+F 0 "Q?" H 10807 996 50  0000 L CNN
+F 1 "TIP120" H 10807 905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10800 875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10600 950 50  0001 L CNN
+	1    10600 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 1150 10700 1150
+Connection ~ 10700 1150
+Connection ~ 10400 950 
+$Comp
+L Device:R R?
+U 1 1 5F53CC83
+P 10250 950
+F 0 "R?" V 10457 950 50  0000 C CNN
+F 1 "3k3" V 10366 950 50  0000 C CNN
+F 2 "" V 10180 950 50  0001 C CNN
+F 3 "~" H 10250 950 50  0001 C CNN
+	1    10250 950 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8150 1400 0    50   Input ~ 0
+LED11
+Wire Wire Line
+	8150 1400 8200 1400
+Wire Wire Line
+	8200 1400 8200 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5F56AFD0
+P 8200 1850
+F 0 "#PWR?" H 8200 1600 50  0001 C CNN
+F 1 "GND" H 8205 1677 50  0000 C CNN
+F 2 "" H 8200 1850 50  0001 C CNN
+F 3 "" H 8200 1850 50  0001 C CNN
+	1    8200 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1650 7600 1650
+Text GLabel 7550 1650 0    50   Input ~ 0
+D11
+$Comp
+L Device:C_Small C?
+U 1 1 5F56AFD8
+P 7900 1750
+F 0 "C?" H 7700 1750 50  0000 L CNN
+F 1 "C_Small" H 7500 1650 50  0000 L CNN
+F 2 "" H 7900 1750 50  0001 C CNN
+F 3 "~" H 7900 1750 50  0001 C CNN
+	1    7900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F56AFDE
+P 8100 1650
+F 0 "Q?" H 8307 1696 50  0000 L CNN
+F 1 "TIP120" H 8307 1605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 1575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8100 1650 50  0001 L CNN
+	1    8100 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1850 8200 1850
+Connection ~ 8200 1850
+Connection ~ 7900 1650
+$Comp
+L Device:R R?
+U 1 1 5F56AFE7
+P 7750 1650
+F 0 "R?" V 7957 1650 50  0000 C CNN
+F 1 "3k3" V 7866 1650 50  0000 C CNN
+F 2 "" V 7680 1650 50  0001 C CNN
+F 3 "~" H 7750 1650 50  0001 C CNN
+	1    7750 1650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9400 1400 0    50   Input ~ 0
+LED12
+Wire Wire Line
+	9400 1400 9450 1400
+Wire Wire Line
+	9450 1400 9450 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5F56AFF0
+P 9450 1850
+F 0 "#PWR?" H 9450 1600 50  0001 C CNN
+F 1 "GND" H 9455 1677 50  0000 C CNN
+F 2 "" H 9450 1850 50  0001 C CNN
+F 3 "" H 9450 1850 50  0001 C CNN
+	1    9450 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 1650 8850 1650
+Text GLabel 8800 1650 0    50   Input ~ 0
+D12
+$Comp
+L Device:C_Small C?
+U 1 1 5F56AFF8
+P 9150 1750
+F 0 "C?" H 8950 1750 50  0000 L CNN
+F 1 "C_Small" H 8750 1650 50  0000 L CNN
+F 2 "" H 9150 1750 50  0001 C CNN
+F 3 "~" H 9150 1750 50  0001 C CNN
+	1    9150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F56AFFE
+P 9350 1650
+F 0 "Q?" H 9557 1696 50  0000 L CNN
+F 1 "TIP120" H 9557 1605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9550 1575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 1650 50  0001 L CNN
+	1    9350 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1850 9450 1850
+Connection ~ 9450 1850
+Connection ~ 9150 1650
+$Comp
+L Device:R R?
+U 1 1 5F56B007
+P 9000 1650
+F 0 "R?" V 9207 1650 50  0000 C CNN
+F 1 "3k3" V 9116 1650 50  0000 C CNN
+F 2 "" V 8930 1650 50  0001 C CNN
+F 3 "~" H 9000 1650 50  0001 C CNN
+	1    9000 1650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10650 1400 0    50   Input ~ 0
+LED13
+Wire Wire Line
+	10650 1400 10700 1400
+Wire Wire Line
+	10700 1400 10700 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5F56B010
+P 10700 1850
+F 0 "#PWR?" H 10700 1600 50  0001 C CNN
+F 1 "GND" H 10705 1677 50  0000 C CNN
+F 2 "" H 10700 1850 50  0001 C CNN
+F 3 "" H 10700 1850 50  0001 C CNN
+	1    10700 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 1650 10100 1650
+Text GLabel 10050 1650 0    50   Input ~ 0
+D13
+$Comp
+L Device:C_Small C?
+U 1 1 5F56B018
+P 10400 1750
+F 0 "C?" H 10200 1750 50  0000 L CNN
+F 1 "C_Small" H 10000 1650 50  0000 L CNN
+F 2 "" H 10400 1750 50  0001 C CNN
+F 3 "~" H 10400 1750 50  0001 C CNN
+	1    10400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F56B01E
+P 10600 1650
+F 0 "Q?" H 10807 1696 50  0000 L CNN
+F 1 "TIP120" H 10807 1605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10800 1575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10600 1650 50  0001 L CNN
+	1    10600 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 1850 10700 1850
+Connection ~ 10700 1850
+Connection ~ 10400 1650
+$Comp
+L Device:R R?
+U 1 1 5F56B027
+P 10250 1650
+F 0 "R?" V 10457 1650 50  0000 C CNN
+F 1 "3k3" V 10366 1650 50  0000 C CNN
+F 2 "" V 10180 1650 50  0001 C CNN
+F 3 "~" H 10250 1650 50  0001 C CNN
+	1    10250 1650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8150 2100 0    50   Input ~ 0
+LED21
+Wire Wire Line
+	8150 2100 8200 2100
+Wire Wire Line
+	8200 2100 8200 2150
+$Comp
+L power:GND #PWR?
+U 1 1 5F574F72
+P 8200 2550
+F 0 "#PWR?" H 8200 2300 50  0001 C CNN
+F 1 "GND" H 8205 2377 50  0000 C CNN
+F 2 "" H 8200 2550 50  0001 C CNN
+F 3 "" H 8200 2550 50  0001 C CNN
+	1    8200 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2350 7600 2350
+Text GLabel 7550 2350 0    50   Input ~ 0
+D21
+$Comp
+L Device:C_Small C?
+U 1 1 5F574F7A
+P 7900 2450
+F 0 "C?" H 7700 2450 50  0000 L CNN
+F 1 "C_Small" H 7500 2350 50  0000 L CNN
+F 2 "" H 7900 2450 50  0001 C CNN
+F 3 "~" H 7900 2450 50  0001 C CNN
+	1    7900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F574F80
+P 8100 2350
+F 0 "Q?" H 8307 2396 50  0000 L CNN
+F 1 "TIP120" H 8307 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 2275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8100 2350 50  0001 L CNN
+	1    8100 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 2550 8200 2550
+Connection ~ 8200 2550
+Connection ~ 7900 2350
+$Comp
+L Device:R R?
+U 1 1 5F574F89
+P 7750 2350
+F 0 "R?" V 7957 2350 50  0000 C CNN
+F 1 "3k3" V 7866 2350 50  0000 C CNN
+F 2 "" V 7680 2350 50  0001 C CNN
+F 3 "~" H 7750 2350 50  0001 C CNN
+	1    7750 2350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9400 2100 0    50   Input ~ 0
+LED22
+Wire Wire Line
+	9400 2100 9450 2100
+Wire Wire Line
+	9450 2100 9450 2150
+$Comp
+L power:GND #PWR?
+U 1 1 5F574F92
+P 9450 2550
+F 0 "#PWR?" H 9450 2300 50  0001 C CNN
+F 1 "GND" H 9455 2377 50  0000 C CNN
+F 2 "" H 9450 2550 50  0001 C CNN
+F 3 "" H 9450 2550 50  0001 C CNN
+	1    9450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 2350 8850 2350
+Text GLabel 8800 2350 0    50   Input ~ 0
+D22
+$Comp
+L Device:C_Small C?
+U 1 1 5F574F9A
+P 9150 2450
+F 0 "C?" H 8950 2450 50  0000 L CNN
+F 1 "C_Small" H 8750 2350 50  0000 L CNN
+F 2 "" H 9150 2450 50  0001 C CNN
+F 3 "~" H 9150 2450 50  0001 C CNN
+	1    9150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F574FA0
+P 9350 2350
+F 0 "Q?" H 9557 2396 50  0000 L CNN
+F 1 "TIP120" H 9557 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9550 2275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 2350 50  0001 L CNN
+	1    9350 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 2550 9450 2550
+Connection ~ 9450 2550
+Connection ~ 9150 2350
+$Comp
+L Device:R R?
+U 1 1 5F574FA9
+P 9000 2350
+F 0 "R?" V 9207 2350 50  0000 C CNN
+F 1 "3k3" V 9116 2350 50  0000 C CNN
+F 2 "" V 8930 2350 50  0001 C CNN
+F 3 "~" H 9000 2350 50  0001 C CNN
+	1    9000 2350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10650 2100 0    50   Input ~ 0
+LED23
+Wire Wire Line
+	10650 2100 10700 2100
+Wire Wire Line
+	10700 2100 10700 2150
+$Comp
+L power:GND #PWR?
+U 1 1 5F574FB2
+P 10700 2550
+F 0 "#PWR?" H 10700 2300 50  0001 C CNN
+F 1 "GND" H 10705 2377 50  0000 C CNN
+F 2 "" H 10700 2550 50  0001 C CNN
+F 3 "" H 10700 2550 50  0001 C CNN
+	1    10700 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2350 10100 2350
+Text GLabel 10050 2350 0    50   Input ~ 0
+D23
+$Comp
+L Device:C_Small C?
+U 1 1 5F574FBA
+P 10400 2450
+F 0 "C?" H 10200 2450 50  0000 L CNN
+F 1 "C_Small" H 10000 2350 50  0000 L CNN
+F 2 "" H 10400 2450 50  0001 C CNN
+F 3 "~" H 10400 2450 50  0001 C CNN
+	1    10400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F574FC0
+P 10600 2350
+F 0 "Q?" H 10807 2396 50  0000 L CNN
+F 1 "TIP120" H 10807 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10800 2275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10600 2350 50  0001 L CNN
+	1    10600 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 2550 10700 2550
+Connection ~ 10700 2550
+Connection ~ 10400 2350
+$Comp
+L Device:R R?
+U 1 1 5F574FC9
+P 10250 2350
+F 0 "R?" V 10457 2350 50  0000 C CNN
+F 1 "3k3" V 10366 2350 50  0000 C CNN
+F 2 "" V 10180 2350 50  0001 C CNN
+F 3 "~" H 10250 2350 50  0001 C CNN
+	1    10250 2350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8150 2800 0    50   Input ~ 0
+LED31
+Wire Wire Line
+	8150 2800 8200 2800
+Wire Wire Line
+	8200 2800 8200 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5F602EFD
+P 8200 3250
+F 0 "#PWR?" H 8200 3000 50  0001 C CNN
+F 1 "GND" H 8205 3077 50  0000 C CNN
+F 2 "" H 8200 3250 50  0001 C CNN
+F 3 "" H 8200 3250 50  0001 C CNN
+	1    8200 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3050 7600 3050
+Text GLabel 7550 3050 0    50   Input ~ 0
+D31
+$Comp
+L Device:C_Small C?
+U 1 1 5F602F05
+P 7900 3150
+F 0 "C?" H 7700 3150 50  0000 L CNN
+F 1 "C_Small" H 7500 3050 50  0000 L CNN
+F 2 "" H 7900 3150 50  0001 C CNN
+F 3 "~" H 7900 3150 50  0001 C CNN
+	1    7900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602F0B
+P 8100 3050
+F 0 "Q?" H 8307 3096 50  0000 L CNN
+F 1 "TIP120" H 8307 3005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 2975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8100 3050 50  0001 L CNN
+	1    8100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3250 8200 3250
+Connection ~ 8200 3250
+Connection ~ 7900 3050
+$Comp
+L Device:R R?
+U 1 1 5F602F14
+P 7750 3050
+F 0 "R?" V 7957 3050 50  0000 C CNN
+F 1 "3k3" V 7866 3050 50  0000 C CNN
+F 2 "" V 7680 3050 50  0001 C CNN
+F 3 "~" H 7750 3050 50  0001 C CNN
+	1    7750 3050
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9400 2800 0    50   Input ~ 0
+LED32
+Wire Wire Line
+	9400 2800 9450 2800
+Wire Wire Line
+	9450 2800 9450 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5F602F1D
+P 9450 3250
+F 0 "#PWR?" H 9450 3000 50  0001 C CNN
+F 1 "GND" H 9455 3077 50  0000 C CNN
+F 2 "" H 9450 3250 50  0001 C CNN
+F 3 "" H 9450 3250 50  0001 C CNN
+	1    9450 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3050 8850 3050
+Text GLabel 8800 3050 0    50   Input ~ 0
+D32
+$Comp
+L Device:C_Small C?
+U 1 1 5F602F25
+P 9150 3150
+F 0 "C?" H 8950 3150 50  0000 L CNN
+F 1 "C_Small" H 8750 3050 50  0000 L CNN
+F 2 "" H 9150 3150 50  0001 C CNN
+F 3 "~" H 9150 3150 50  0001 C CNN
+	1    9150 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602F2B
+P 9350 3050
+F 0 "Q?" H 9557 3096 50  0000 L CNN
+F 1 "TIP120" H 9557 3005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9550 2975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 3050 50  0001 L CNN
+	1    9350 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3250 9450 3250
+Connection ~ 9450 3250
+Connection ~ 9150 3050
+$Comp
+L Device:R R?
+U 1 1 5F602F34
+P 9000 3050
+F 0 "R?" V 9207 3050 50  0000 C CNN
+F 1 "3k3" V 9116 3050 50  0000 C CNN
+F 2 "" V 8930 3050 50  0001 C CNN
+F 3 "~" H 9000 3050 50  0001 C CNN
+	1    9000 3050
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10650 2800 0    50   Input ~ 0
+LED33
+Wire Wire Line
+	10650 2800 10700 2800
+Wire Wire Line
+	10700 2800 10700 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5F602F3D
+P 10700 3250
+F 0 "#PWR?" H 10700 3000 50  0001 C CNN
+F 1 "GND" H 10705 3077 50  0000 C CNN
+F 2 "" H 10700 3250 50  0001 C CNN
+F 3 "" H 10700 3250 50  0001 C CNN
+	1    10700 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 3050 10100 3050
+Text GLabel 10050 3050 0    50   Input ~ 0
+D33
+$Comp
+L Device:C_Small C?
+U 1 1 5F602F45
+P 10400 3150
+F 0 "C?" H 10200 3150 50  0000 L CNN
+F 1 "C_Small" H 10000 3050 50  0000 L CNN
+F 2 "" H 10400 3150 50  0001 C CNN
+F 3 "~" H 10400 3150 50  0001 C CNN
+	1    10400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602F4B
+P 10600 3050
+F 0 "Q?" H 10807 3096 50  0000 L CNN
+F 1 "TIP120" H 10807 3005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10800 2975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10600 3050 50  0001 L CNN
+	1    10600 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 3250 10700 3250
+Connection ~ 10700 3250
+Connection ~ 10400 3050
+$Comp
+L Device:R R?
+U 1 1 5F602F54
+P 10250 3050
+F 0 "R?" V 10457 3050 50  0000 C CNN
+F 1 "3k3" V 10366 3050 50  0000 C CNN
+F 2 "" V 10180 3050 50  0001 C CNN
+F 3 "~" H 10250 3050 50  0001 C CNN
+	1    10250 3050
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8150 3500 0    50   Input ~ 0
+LED41
+Wire Wire Line
+	8150 3500 8200 3500
+Wire Wire Line
+	8200 3500 8200 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5F602F5D
+P 8200 3950
+F 0 "#PWR?" H 8200 3700 50  0001 C CNN
+F 1 "GND" H 8205 3777 50  0000 C CNN
+F 2 "" H 8200 3950 50  0001 C CNN
+F 3 "" H 8200 3950 50  0001 C CNN
+	1    8200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3750 7600 3750
+Text GLabel 7550 3750 0    50   Input ~ 0
+D41
+$Comp
+L Device:C_Small C?
+U 1 1 5F602F65
+P 7900 3850
+F 0 "C?" H 7700 3850 50  0000 L CNN
+F 1 "C_Small" H 7500 3750 50  0000 L CNN
+F 2 "" H 7900 3850 50  0001 C CNN
+F 3 "~" H 7900 3850 50  0001 C CNN
+	1    7900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602F6B
+P 8100 3750
+F 0 "Q?" H 8307 3796 50  0000 L CNN
+F 1 "TIP120" H 8307 3705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 3675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8100 3750 50  0001 L CNN
+	1    8100 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3950 8200 3950
+Connection ~ 8200 3950
+Connection ~ 7900 3750
+$Comp
+L Device:R R?
+U 1 1 5F602F74
+P 7750 3750
+F 0 "R?" V 7957 3750 50  0000 C CNN
+F 1 "3k3" V 7866 3750 50  0000 C CNN
+F 2 "" V 7680 3750 50  0001 C CNN
+F 3 "~" H 7750 3750 50  0001 C CNN
+	1    7750 3750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9400 3500 0    50   Input ~ 0
+LED42
+Wire Wire Line
+	9400 3500 9450 3500
+Wire Wire Line
+	9450 3500 9450 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5F602F7D
+P 9450 3950
+F 0 "#PWR?" H 9450 3700 50  0001 C CNN
+F 1 "GND" H 9455 3777 50  0000 C CNN
+F 2 "" H 9450 3950 50  0001 C CNN
+F 3 "" H 9450 3950 50  0001 C CNN
+	1    9450 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3750 8850 3750
+Text GLabel 8800 3750 0    50   Input ~ 0
+D42
+$Comp
+L Device:C_Small C?
+U 1 1 5F602F85
+P 9150 3850
+F 0 "C?" H 8950 3850 50  0000 L CNN
+F 1 "C_Small" H 8750 3750 50  0000 L CNN
+F 2 "" H 9150 3850 50  0001 C CNN
+F 3 "~" H 9150 3850 50  0001 C CNN
+	1    9150 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602F8B
+P 9350 3750
+F 0 "Q?" H 9557 3796 50  0000 L CNN
+F 1 "TIP120" H 9557 3705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9550 3675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 3750 50  0001 L CNN
+	1    9350 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3950 9450 3950
+Connection ~ 9450 3950
+Connection ~ 9150 3750
+$Comp
+L Device:R R?
+U 1 1 5F602F94
+P 9000 3750
+F 0 "R?" V 9207 3750 50  0000 C CNN
+F 1 "3k3" V 9116 3750 50  0000 C CNN
+F 2 "" V 8930 3750 50  0001 C CNN
+F 3 "~" H 9000 3750 50  0001 C CNN
+	1    9000 3750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10650 3500 0    50   Input ~ 0
+LED43
+Wire Wire Line
+	10650 3500 10700 3500
+Wire Wire Line
+	10700 3500 10700 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5F602F9D
+P 10700 3950
+F 0 "#PWR?" H 10700 3700 50  0001 C CNN
+F 1 "GND" H 10705 3777 50  0000 C CNN
+F 2 "" H 10700 3950 50  0001 C CNN
+F 3 "" H 10700 3950 50  0001 C CNN
+	1    10700 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 3750 10100 3750
+Text GLabel 10050 3750 0    50   Input ~ 0
+D43
+$Comp
+L Device:C_Small C?
+U 1 1 5F602FA5
+P 10400 3850
+F 0 "C?" H 10200 3850 50  0000 L CNN
+F 1 "C_Small" H 10000 3750 50  0000 L CNN
+F 2 "" H 10400 3850 50  0001 C CNN
+F 3 "~" H 10400 3850 50  0001 C CNN
+	1    10400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602FAB
+P 10600 3750
+F 0 "Q?" H 10807 3796 50  0000 L CNN
+F 1 "TIP120" H 10807 3705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10800 3675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10600 3750 50  0001 L CNN
+	1    10600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 3950 10700 3950
+Connection ~ 10700 3950
+Connection ~ 10400 3750
+$Comp
+L Device:R R?
+U 1 1 5F602FB4
+P 10250 3750
+F 0 "R?" V 10457 3750 50  0000 C CNN
+F 1 "3k3" V 10366 3750 50  0000 C CNN
+F 2 "" V 10180 3750 50  0001 C CNN
+F 3 "~" H 10250 3750 50  0001 C CNN
+	1    10250 3750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8150 4200 0    50   Input ~ 0
+LED51
+Wire Wire Line
+	8150 4200 8200 4200
+Wire Wire Line
+	8200 4200 8200 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5F602FBD
+P 8200 4650
+F 0 "#PWR?" H 8200 4400 50  0001 C CNN
+F 1 "GND" H 8205 4477 50  0000 C CNN
+F 2 "" H 8200 4650 50  0001 C CNN
+F 3 "" H 8200 4650 50  0001 C CNN
+	1    8200 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4450 7600 4450
+Text GLabel 7550 4450 0    50   Input ~ 0
+D51
+$Comp
+L Device:C_Small C?
+U 1 1 5F602FC5
+P 7900 4550
+F 0 "C?" H 7700 4550 50  0000 L CNN
+F 1 "C_Small" H 7500 4450 50  0000 L CNN
+F 2 "" H 7900 4550 50  0001 C CNN
+F 3 "~" H 7900 4550 50  0001 C CNN
+	1    7900 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q?
+U 1 1 5F602FCB
+P 8100 4450
+F 0 "Q?" H 8307 4496 50  0000 L CNN
+F 1 "TIP120" H 8307 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 4375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8100 4450 50  0001 L CNN
+	1    8100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4650 8200 4650
+Connection ~ 8200 4650
+Connection ~ 7900 4450
+$Comp
+L Device:R R?
+U 1 1 5F602FD4
+P 7750 4450
+F 0 "R?" V 7957 4450 50  0000 C CNN
+F 1 "3k3" V 7866 4450 50  0000 C CNN
+F 2 "" V 7680 4450 50  0001 C CNN
+F 3 "~" H 7750 4450 50  0001 C CNN
+	1    7750 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5F6646A7
+P 6650 950
+F 0 "J?" H 6678 926 50  0000 L CNN
+F 1 "PWMpair1" H 6678 835 50  0000 L CNN
+F 2 "" H 6650 950 50  0001 C CNN
+F 3 "~" H 6650 950 50  0001 C CNN
+	1    6650 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5F667197
+P 6650 1550
+F 0 "J?" H 6678 1526 50  0000 L CNN
+F 1 "PWMpair2" H 6678 1435 50  0000 L CNN
+F 2 "" H 6650 1550 50  0001 C CNN
+F 3 "~" H 6650 1550 50  0001 C CNN
+	1    6650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5F66B34E
+P 6650 2700
+F 0 "J?" H 6678 2676 50  0000 L CNN
+F 1 "PWMpair4" H 6678 2585 50  0000 L CNN
+F 2 "" H 6650 2700 50  0001 C CNN
+F 3 "~" H 6650 2700 50  0001 C CNN
+	1    6650 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x16_Male J?
+U 1 1 5F671136
+P 6250 3950
+F 0 "J?" H 6358 4831 50  0000 C CNN
+F 1 "rgbGNDs" H 6358 4740 50  0000 C CNN
+F 2 "" H 6250 3950 50  0001 C CNN
+F 3 "~" H 6250 3950 50  0001 C CNN
+	1    6250 3950
+	1    0    0    -1  
+$EndComp
+Text GLabel 6450 850  0    50   Input ~ 0
+D01
+Text GLabel 6450 950  0    50   Input ~ 0
+D02
+Text GLabel 6450 1050 0    50   Input ~ 0
+D03
+Text GLabel 6450 1150 0    50   Input ~ 0
+D11
+Text GLabel 6450 1450 0    50   Input ~ 0
+D12
+Text GLabel 6450 1550 0    50   Input ~ 0
+D13
+Text GLabel 6450 1650 0    50   Input ~ 0
+D21
+Text GLabel 6450 1750 0    50   Input ~ 0
+D22
+Text GLabel 6450 2000 0    50   Input ~ 0
+D23
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5F6694D8
+P 6650 2100
+F 0 "J?" H 6678 2076 50  0000 L CNN
+F 1 "PWMpair3" H 6678 1985 50  0000 L CNN
+F 2 "" H 6650 2100 50  0001 C CNN
+F 3 "~" H 6650 2100 50  0001 C CNN
+	1    6650 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 6450 2100 0    50   Input ~ 0
+D31
+Text GLabel 6450 2200 0    50   Input ~ 0
+D32
+Text GLabel 6450 2300 0    50   Input ~ 0
+D33
+Text GLabel 6450 2600 0    50   Input ~ 0
+D41
+Text GLabel 6450 2700 0    50   Input ~ 0
+D42
+Text GLabel 6450 2800 0    50   Input ~ 0
+D43
+Text GLabel 6450 2900 0    50   Input ~ 0
+D51
+Text GLabel 6450 3250 2    50   Input ~ 0
+LED01
+Text GLabel 6450 3350 2    50   Input ~ 0
+LED02
+Text GLabel 6450 3450 2    50   Input ~ 0
+LED03
+Text GLabel 6450 3550 2    50   Input ~ 0
+LED11
+Text GLabel 6450 3650 2    50   Input ~ 0
+LED12
+Text GLabel 6450 3750 2    50   Input ~ 0
+LED13
+Text GLabel 6450 3850 2    50   Input ~ 0
+LED21
+Text GLabel 6450 3950 2    50   Input ~ 0
+LED22
+Text GLabel 6450 4050 2    50   Input ~ 0
+LED23
+Text GLabel 6450 4150 2    50   Input ~ 0
+LED31
+Text GLabel 6450 4250 2    50   Input ~ 0
+LED32
+Text GLabel 6450 4350 2    50   Input ~ 0
+LED33
+Text GLabel 6450 4450 2    50   Input ~ 0
+LED41
+Text GLabel 6450 4550 2    50   Input ~ 0
+LED42
+Text GLabel 6450 4650 2    50   Input ~ 0
+LED43
+Text GLabel 6450 4750 2    50   Input ~ 0
+LED51
+$EndSCHEMATC
