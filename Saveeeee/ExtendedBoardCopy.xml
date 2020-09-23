@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>E:\OSTATNÍ\HomeLeds\ExtendedBoard\ExtendedBoardCopy.sch</source>
+    <date>23.09.2020 17:03:44</date>
+    <tool>Eeschema (5.1.6)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ExtendedBoardCopy.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F51B093</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F271720</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F2759A8</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F53A472</tstamp>
+    </comp>
+    <comp ref="Q7">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F53A478</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F53CC74</tstamp>
+    </comp>
+    <comp ref="Q12">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F53CC7A</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56AFD8</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56AFDE</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56AFF8</tstamp>
+    </comp>
+    <comp ref="Q8">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56AFFE</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56B007</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56B018</tstamp>
+    </comp>
+    <comp ref="Q13">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56B01E</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56B027</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574F7A</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574F80</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574F89</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574F9A</tstamp>
+    </comp>
+    <comp ref="Q9">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574FA0</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574FA9</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574FBA</tstamp>
+    </comp>
+    <comp ref="Q14">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574FC0</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F574FC9</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F05</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F0B</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F14</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F25</tstamp>
+    </comp>
+    <comp ref="Q10">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F2B</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F34</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F45</tstamp>
+    </comp>
+    <comp ref="Q15">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F4B</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F54</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F65</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F6B</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F74</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F85</tstamp>
+    </comp>
+    <comp ref="Q11">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F8B</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602F94</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602FA5</tstamp>
+    </comp>
+    <comp ref="Q16">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602FAB</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602FB4</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602FC5</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>TIP120</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="TIP120" description="5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602FCB</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F602FD4</tstamp>
+    </comp>
+    <comp ref="J17">
+      <value>PWMpair1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6646A7</tstamp>
+    </comp>
+    <comp ref="J18">
+      <value>PWMpair2</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F667197</tstamp>
+    </comp>
+    <comp ref="J20">
+      <value>PWMpair4</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F66B34E</tstamp>
+    </comp>
+    <comp ref="J19">
+      <value>PWMpair3</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6694D8</tstamp>
+    </comp>
+    <comp ref="J12">
+      <value>GNDpair1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6B14E0</tstamp>
+    </comp>
+    <comp ref="J13">
+      <value>GNDpair2</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6B4EE5</tstamp>
+    </comp>
+    <comp ref="PCA9685A1">
+      <value>Inputs_PCA9685A</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x05_Female" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6D63CD</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Ard 01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x10_Male" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6E5097</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Ard 02</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6E6BED</tstamp>
+    </comp>
+    <comp ref="J15">
+      <value>GNDpair1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6B820A</tstamp>
+    </comp>
+    <comp ref="J14">
+      <value>GNDpair1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6B68B5</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F56AFE7</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F53CC83</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>3k3</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F53A481</tstamp>
+    </comp>
+    <comp ref="12V1">
+      <value>INPUTS_Ard02</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x05_Male" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE3D255</tstamp>
+    </comp>
+    <comp ref="Supply1">
+      <value>INPUTS_Ard02_01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x05_Male" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE437E3</tstamp>
+    </comp>
+    <comp ref="DeanT1">
+      <value>DeanTInput_01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE48F42</tstamp>
+    </comp>
+    <comp ref="+12V1">
+      <value>12VOutput</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE35C9A</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>Ard 02_1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x08_Female" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F700D69</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>Ard 01_1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x10_Female" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F703E70</tstamp>
+    </comp>
+    <comp ref="SUPPLYard1">
+      <value>SUPPLYard</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F714075</tstamp>
+    </comp>
+    <comp ref="TR2">
+      <value>RGB pinout</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x16_Male" description="Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F73D89B</tstamp>
+    </comp>
+    <comp ref="IR1">
+      <value>PINOUT IR</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Female" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F85A37A</tstamp>
+    </comp>
+    <comp ref="GND2">
+      <value>PINOUT GNDs</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F71EA26</tstamp>
+    </comp>
+    <comp ref="+5V2">
+      <value>SUP ++</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x07_Male" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6EDD4A</tstamp>
+    </comp>
+    <comp ref="+5V1">
+      <value>SUP ++</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x07_Male" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6D8899</tstamp>
+    </comp>
+    <comp ref="GND1">
+      <value>PINOUT GNDS</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x07_Male" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6C11E4</tstamp>
+    </comp>
+    <comp ref="Vcc1">
+      <value>PINOUT ard Supply</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F6BE02E</tstamp>
+    </comp>
+    <comp ref="TR1">
+      <value>RGB pinout</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x16_Male" description="Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7B03E1</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x02_Male">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x03_Female">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x03_Male">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x04_Female">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x04_Male">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x05_Female">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x05_Male">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x07_Male">
+      <description>Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x07_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x08_Female">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x08_Male">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x10_Female">
+      <description>Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x10_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x10_Male">
+      <description>Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x10_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x16_Male">
+      <description>Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x16_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="TIP120">
+      <aliases>
+        <alias>TIP121</alias>
+        <alias>TIP122</alias>
+      </aliases>
+      <description>5A Ic, 60V Vce, Silicon Darlington Power NPN Transistor, TO-220</description>
+      <docs>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">TIP120</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Transistor_BJT.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(12V1-Pad5)">
+      <node ref="12V1" pin="5"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="C13" pin="2"/>
+      <node ref="Q8" pin="3"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="C3" pin="2"/>
+      <node ref="Q13" pin="3"/>
+      <node ref="IR1" pin="1"/>
+      <node ref="Q7" pin="3"/>
+      <node ref="C14" pin="2"/>
+      <node ref="Q14" pin="3"/>
+      <node ref="C9" pin="2"/>
+      <node ref="Q9" pin="3"/>
+      <node ref="C7" pin="2"/>
+      <node ref="GND1" pin="5"/>
+      <node ref="J5" pin="4"/>
+      <node ref="GND1" pin="2"/>
+      <node ref="GND1" pin="1"/>
+      <node ref="+5V1" pin="7"/>
+      <node ref="GND1" pin="3"/>
+      <node ref="GND1" pin="4"/>
+      <node ref="GND2" pin="3"/>
+      <node ref="GND1" pin="6"/>
+      <node ref="GND1" pin="7"/>
+      <node ref="+5V2" pin="7"/>
+      <node ref="SUPPLYard1" pin="2"/>
+      <node ref="SUPPLYard1" pin="4"/>
+      <node ref="J7" pin="4"/>
+      <node ref="GND2" pin="1"/>
+      <node ref="GND2" pin="2"/>
+      <node ref="Q10" pin="3"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="Q6" pin="3"/>
+      <node ref="C6" pin="2"/>
+      <node ref="Q11" pin="3"/>
+      <node ref="Q4" pin="3"/>
+      <node ref="C5" pin="2"/>
+      <node ref="Q5" pin="3"/>
+      <node ref="C15" pin="2"/>
+      <node ref="Q15" pin="3"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="C2" pin="2"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="C12" pin="2"/>
+      <node ref="Q12" pin="3"/>
+      <node ref="Q16" pin="3"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="J14" pin="1"/>
+      <node ref="J12" pin="1"/>
+      <node ref="J14" pin="2"/>
+      <node ref="J13" pin="3"/>
+      <node ref="J14" pin="3"/>
+      <node ref="DeanT1" pin="2"/>
+      <node ref="J14" pin="4"/>
+      <node ref="J15" pin="2"/>
+      <node ref="J12" pin="4"/>
+      <node ref="J12" pin="3"/>
+      <node ref="12V1" pin="2"/>
+      <node ref="PCA9685A1" pin="5"/>
+      <node ref="+12V1" pin="2"/>
+      <node ref="J13" pin="2"/>
+      <node ref="J12" pin="2"/>
+      <node ref="Supply1" pin="2"/>
+      <node ref="J13" pin="1"/>
+      <node ref="J13" pin="4"/>
+      <node ref="J15" pin="1"/>
+      <node ref="J15" pin="3"/>
+      <node ref="J15" pin="4"/>
+    </net>
+    <net code="3" name="Net-(Supply1-Pad5)">
+      <node ref="Supply1" pin="5"/>
+    </net>
+    <net code="4" name="5V+">
+      <node ref="+5V2" pin="2"/>
+      <node ref="+5V1" pin="5"/>
+      <node ref="+5V1" pin="6"/>
+      <node ref="+5V1" pin="4"/>
+      <node ref="+5V2" pin="1"/>
+      <node ref="+5V2" pin="3"/>
+      <node ref="+5V2" pin="4"/>
+      <node ref="+5V2" pin="5"/>
+      <node ref="+5V2" pin="6"/>
+      <node ref="DeanT1" pin="1"/>
+      <node ref="+5V1" pin="3"/>
+      <node ref="+5V1" pin="1"/>
+      <node ref="+5V1" pin="2"/>
+    </net>
+    <net code="5" name="D02">
+      <node ref="R2" pin="1"/>
+      <node ref="J17" pin="2"/>
+    </net>
+    <net code="6" name="Net-(C2-Pad1)">
+      <node ref="Q2" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="7" name="Net-(C12-Pad1)">
+      <node ref="R12" pin="2"/>
+      <node ref="Q12" pin="1"/>
+      <node ref="C12" pin="1"/>
+    </net>
+    <net code="8" name="D07">
+      <node ref="R7" pin="1"/>
+      <node ref="J18" pin="3"/>
+    </net>
+    <net code="9" name="Net-(C7-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="C7" pin="1"/>
+      <node ref="Q7" pin="1"/>
+    </net>
+    <net code="10" name="12V+">
+      <node ref="+12V1" pin="1"/>
+      <node ref="Supply1" pin="1"/>
+      <node ref="12V1" pin="1"/>
+    </net>
+    <net code="11" name="SDA1">
+      <node ref="Supply1" pin="4"/>
+      <node ref="PCA9685A1" pin="3"/>
+      <node ref="12V1" pin="4"/>
+      <node ref="J5" pin="2"/>
+      <node ref="J7" pin="2"/>
+    </net>
+    <net code="12" name="DI8">
+      <node ref="J7" pin="10"/>
+      <node ref="J5" pin="10"/>
+    </net>
+    <net code="13" name="DI9">
+      <node ref="J7" pin="9"/>
+      <node ref="J5" pin="9"/>
+    </net>
+    <net code="14" name="DI10">
+      <node ref="J7" pin="8"/>
+      <node ref="J5" pin="8"/>
+      <node ref="IR1" pin="3"/>
+    </net>
+    <net code="15" name="DI11">
+      <node ref="J5" pin="7"/>
+      <node ref="PCA9685A1" pin="4"/>
+      <node ref="J7" pin="7"/>
+    </net>
+    <net code="16" name="DI12">
+      <node ref="J5" pin="6"/>
+      <node ref="J7" pin="6"/>
+    </net>
+    <net code="17" name="DI13">
+      <node ref="J7" pin="5"/>
+      <node ref="J5" pin="5"/>
+    </net>
+    <net code="18" name="AREF">
+      <node ref="J5" pin="3"/>
+      <node ref="J7" pin="3"/>
+    </net>
+    <net code="19" name="DI0">
+      <node ref="J6" pin="8"/>
+      <node ref="J8" pin="8"/>
+    </net>
+    <net code="20" name="SCL1">
+      <node ref="J5" pin="1"/>
+      <node ref="PCA9685A1" pin="2"/>
+      <node ref="12V1" pin="3"/>
+      <node ref="Supply1" pin="3"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="21" name="DI6">
+      <node ref="J6" pin="2"/>
+      <node ref="J8" pin="2"/>
+    </net>
+    <net code="22" name="DI1">
+      <node ref="J6" pin="7"/>
+      <node ref="J8" pin="7"/>
+    </net>
+    <net code="23" name="DI2">
+      <node ref="J8" pin="6"/>
+      <node ref="J6" pin="6"/>
+    </net>
+    <net code="24" name="DI3">
+      <node ref="J8" pin="5"/>
+      <node ref="J6" pin="5"/>
+    </net>
+    <net code="25" name="DI4">
+      <node ref="J8" pin="4"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="26" name="DI5">
+      <node ref="J6" pin="3"/>
+      <node ref="J8" pin="3"/>
+    </net>
+    <net code="27" name="DI7">
+      <node ref="J8" pin="1"/>
+      <node ref="J6" pin="1"/>
+    </net>
+    <net code="28" name="Vcc">
+      <node ref="Vcc1" pin="3"/>
+      <node ref="SUPPLYard1" pin="3"/>
+      <node ref="Vcc1" pin="2"/>
+      <node ref="Vcc1" pin="1"/>
+      <node ref="SUPPLYard1" pin="1"/>
+      <node ref="IR1" pin="2"/>
+      <node ref="PCA9685A1" pin="1"/>
+    </net>
+    <net code="29" name="D12">
+      <node ref="R12" pin="1"/>
+      <node ref="J19" pin="4"/>
+    </net>
+    <net code="30" name="LED16">
+      <node ref="TR1" pin="16"/>
+      <node ref="TR2" pin="16"/>
+      <node ref="Q16" pin="2"/>
+    </net>
+    <net code="31" name="LED01">
+      <node ref="Q1" pin="2"/>
+      <node ref="TR2" pin="1"/>
+      <node ref="TR1" pin="1"/>
+    </net>
+    <net code="32" name="LED10">
+      <node ref="TR1" pin="10"/>
+      <node ref="Q10" pin="2"/>
+      <node ref="TR2" pin="10"/>
+    </net>
+    <net code="33" name="LED11">
+      <node ref="TR2" pin="11"/>
+      <node ref="TR1" pin="11"/>
+      <node ref="Q11" pin="2"/>
+    </net>
+    <net code="34" name="LED12">
+      <node ref="Q12" pin="2"/>
+      <node ref="TR1" pin="12"/>
+      <node ref="TR2" pin="12"/>
+    </net>
+    <net code="35" name="LED13">
+      <node ref="TR1" pin="13"/>
+      <node ref="Q13" pin="2"/>
+      <node ref="TR2" pin="13"/>
+    </net>
+    <net code="36" name="LED14">
+      <node ref="TR2" pin="14"/>
+      <node ref="Q14" pin="2"/>
+      <node ref="TR1" pin="14"/>
+    </net>
+    <net code="37" name="LED15">
+      <node ref="TR1" pin="15"/>
+      <node ref="TR2" pin="15"/>
+      <node ref="Q15" pin="2"/>
+    </net>
+    <net code="38" name="LED02">
+      <node ref="TR1" pin="2"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="TR2" pin="2"/>
+    </net>
+    <net code="39" name="LED03">
+      <node ref="Q3" pin="2"/>
+      <node ref="TR2" pin="3"/>
+      <node ref="TR1" pin="3"/>
+    </net>
+    <net code="40" name="LED04">
+      <node ref="TR1" pin="4"/>
+      <node ref="Q4" pin="2"/>
+      <node ref="TR2" pin="4"/>
+    </net>
+    <net code="41" name="LED05">
+      <node ref="TR2" pin="5"/>
+      <node ref="TR1" pin="5"/>
+      <node ref="Q5" pin="2"/>
+    </net>
+    <net code="42" name="LED06">
+      <node ref="TR2" pin="6"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="TR1" pin="6"/>
+    </net>
+    <net code="43" name="LED07">
+      <node ref="TR2" pin="7"/>
+      <node ref="TR1" pin="7"/>
+      <node ref="Q7" pin="2"/>
+    </net>
+    <net code="44" name="LED08">
+      <node ref="TR1" pin="8"/>
+      <node ref="Q8" pin="2"/>
+      <node ref="TR2" pin="8"/>
+    </net>
+    <net code="45" name="LED09">
+      <node ref="Q9" pin="2"/>
+      <node ref="TR2" pin="9"/>
+      <node ref="TR1" pin="9"/>
+    </net>
+    <net code="46" name="D11">
+      <node ref="R11" pin="1"/>
+      <node ref="J19" pin="3"/>
+    </net>
+    <net code="47" name="Net-(C13-Pad1)">
+      <node ref="R13" pin="2"/>
+      <node ref="Q13" pin="1"/>
+      <node ref="C13" pin="1"/>
+    </net>
+    <net code="48" name="D03">
+      <node ref="J17" pin="3"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="49" name="Net-(C3-Pad1)">
+      <node ref="Q3" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="50" name="D08">
+      <node ref="J18" pin="4"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="51" name="Net-(C8-Pad1)">
+      <node ref="R8" pin="2"/>
+      <node ref="Q8" pin="1"/>
+      <node ref="C8" pin="1"/>
+    </net>
+    <net code="52" name="Net-(C9-Pad1)">
+      <node ref="Q9" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="53" name="Net-(C14-Pad1)">
+      <node ref="C14" pin="1"/>
+      <node ref="Q14" pin="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="54" name="Net-(C1-Pad1)">
+      <node ref="R1" pin="2"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="55" name="D01">
+      <node ref="J17" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="56" name="Net-(C16-Pad1)">
+      <node ref="Q16" pin="1"/>
+      <node ref="R16" pin="2"/>
+      <node ref="C16" pin="1"/>
+    </net>
+    <net code="57" name="Net-(C11-Pad1)">
+      <node ref="C11" pin="1"/>
+      <node ref="R11" pin="2"/>
+      <node ref="Q11" pin="1"/>
+    </net>
+    <net code="58" name="D06">
+      <node ref="J18" pin="2"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="59" name="D13">
+      <node ref="J20" pin="1"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="60" name="D14">
+      <node ref="R14" pin="1"/>
+      <node ref="J20" pin="2"/>
+    </net>
+    <net code="61" name="D15">
+      <node ref="J20" pin="3"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="62" name="D16">
+      <node ref="R16" pin="1"/>
+      <node ref="J20" pin="4"/>
+    </net>
+    <net code="63" name="D05">
+      <node ref="R5" pin="1"/>
+      <node ref="J18" pin="1"/>
+    </net>
+    <net code="64" name="D09">
+      <node ref="R9" pin="1"/>
+      <node ref="J19" pin="1"/>
+    </net>
+    <net code="65" name="D10">
+      <node ref="R10" pin="1"/>
+      <node ref="J19" pin="2"/>
+    </net>
+    <net code="66" name="Net-(C6-Pad1)">
+      <node ref="C6" pin="1"/>
+      <node ref="Q6" pin="1"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="67" name="D04">
+      <node ref="R4" pin="1"/>
+      <node ref="J17" pin="4"/>
+    </net>
+    <net code="68" name="Net-(C10-Pad1)">
+      <node ref="Q10" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="69" name="Net-(C4-Pad1)">
+      <node ref="R4" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="Q4" pin="1"/>
+    </net>
+    <net code="70" name="Net-(C5-Pad1)">
+      <node ref="R5" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="Q5" pin="1"/>
+    </net>
+    <net code="71" name="Net-(C15-Pad1)">
+      <node ref="C15" pin="1"/>
+      <node ref="Q15" pin="1"/>
+      <node ref="R15" pin="2"/>
+    </net>
+  </nets>
+</export>
