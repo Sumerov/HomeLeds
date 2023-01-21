@@ -13,15 +13,16 @@ LiquidCrystal_I2C lcd(0x27,20,4);
  
 
 uint8_t ledsLenght[] = {NUM_LEDS_LEFT, NUM_LEDS_MID, NUM_LEDS_MON, NUM_LEDS_RIGHT};
-bool AnToLedsOn[] = {false, false, false, false};
-bool AnToLedsOnOld[] = {false, false, false, false};
 CRGB ledsLeft[NUM_LEDS_LEFT];
 CRGB ledsMid[NUM_LEDS_MID];
 CRGB ledsMon[NUM_LEDS_MON];
 CRGB ledsRight[NUM_LEDS_RIGHT];
 CRGB *leds[] = {ledsLeft, ledsMid, ledsMon, ledsRight};
 CLEDController *controllers[4];
-
+//void setPixel(uint8_t field, uint8_t Pixel, byte red, byte green, byte blue);
+//void showLEDs(int delayI);
+//void setPixelPerc(int arrayNum, int ledNum, byte red, byte green, byte blue, float perc);
+//void fadeToogle(uint8_t red, uint8_t green, uint8_t blue);
 
 void showStrip() {
  #ifdef ADAFRUIT_NEOPIXEL_H
@@ -36,19 +37,7 @@ void showStrip() {
 int brightness = 70;
 
 void setup() {
-  controllers[0] = &FastLED.addLeds<WS2812B, 6, GRB>(ledsLeft, NUM_LEDS_LEFT).setCorrection( TypicalLEDStrip );
-  controllers[1] = &FastLED.addLeds<WS2812B, 11, GRB>(ledsMid, NUM_LEDS_MID).setCorrection( TypicalLEDStrip );
-  controllers[2] = &FastLED.addLeds<WS2812B, 10, GRB>(ledsMon, NUM_LEDS_MON).setCorrection( TypicalLEDStrip );
-  controllers[3] = &FastLED.addLeds<WS2812B, 9, GRB>(ledsRight, NUM_LEDS_RIGHT).setCorrection( TypicalLEDStrip );
-  FastLED.setBrightness(  brightness  );
-  delay(500);
-  AnToLedsOn[2] = true;
-  for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
-        setPixel(2, i, 255, 0, 0);     
-  }
-  showLEDs(33);
-    
-  delay(45000);
+  //delay(45000);
   Serial.begin(9600);
   lcd.init(); 
   lcd.noBacklight();
@@ -56,16 +45,25 @@ void setup() {
   lcd.print("--------------------");
   lcd.setCursor(0,1);
   lcd.print("----|||------|||----");
-   lcd.setCursor(0,2);
+  lcd.setCursor(0,2);
   lcd.print("----|||------|||----");
-   lcd.setCursor(0,3);
+  lcd.setCursor(0,3);
   lcd.print("---------OOO--------");
   pinMode(RELAYPIN, OUTPUT);
   digitalWrite(RELAYPIN, LOW);
   //irrecv.enableIRIn();
   //irrecv.blink13(true);
   
-  delay(500);
+  controllers[0] = &FastLED.addLeds<WS2812B, 6, GRB>(ledsLeft, NUM_LEDS_LEFT).setCorrection( TypicalLEDStrip );
+  controllers[1] = &FastLED.addLeds<WS2812B, 11, GRB>(ledsMid, NUM_LEDS_MID).setCorrection( TypicalLEDStrip );
+  controllers[2] = &FastLED.addLeds<WS2812B, 10, GRB>(ledsMon, NUM_LEDS_MON).setCorrection( TypicalLEDStrip );
+  controllers[3] = &FastLED.addLeds<WS2812B, 9, GRB>(ledsRight, NUM_LEDS_RIGHT).setCorrection( TypicalLEDStrip );
+  FastLED.setBrightness(  brightness  );
+  /*for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
+      setPixel(2, i, 0, 0, 0);
+  }
+  showLEDs(33);*/
+  delay(5000);
 }
 #define MAXVALUE 500
 #define FadeMAXVALUE2 250000
@@ -73,10 +71,14 @@ void setup() {
 #define MINVALUE2 175 //pow(2);
 byte value = 0;
 
-
+bool AnToLedsOn[] = {false, false, false, false};
+bool AnToLedsOnOld[] = {false, false, false, false};
 
 int debug = 0;
+
+
 void loop() {
+  
   for(int i=0; i<4; i++) {
     AnToLedsOn[i] = true;  
   }
@@ -89,7 +91,7 @@ void loop() {
   //fadeToogle(255,160,40);
   if(debug == 1)Serial.println("first END"); 
   //delay(50000); 
-  /*
+  
   if(debug == 1)Serial.println("Sec"); 
   
   AnToLedsOn[1] = true;
@@ -105,25 +107,26 @@ void loop() {
   fadeToogle(255,40,255);
   if(debug == 1)Serial.println("3th END"); 
   delay(500);
-  */
+  
 
   byte red = 255;
   byte green = 160;
   byte blue = 40;
-
-    for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
-        setPixel(2, i, red, green, blue);     
+  
+  //lcd.backlight();
+  for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
+    
+      //if(i>1) setPixelPerc(2, i-2, red, green, blue, 1.0);
+      //if(i>0) setPixelPerc(2, i-1, red, green, blue, 0.5);
+      //setPixelPerc(2, i, red, green, blue, 0.1);
+      setPixel((uint8_t)2, i, red, green, blue);
+      showLEDs(33);
+      //lcd.setCursor(0,3);
+      //lcd.print(i+1); 
   }
-  showLEDs(33);
-    
-    for(uint8_t i = 0; i < 30; i++ ) {
-        setPixel(0, i, red, green, blue);
-        showLEDs(33);
-    }
-
-    
    
    int value = 0; 
+   for(uint8_t i = 0; i < 90; i++ ) {
     for(uint8_t i = 30; i < 87; i++ ) {
       setPixel(0, i, red, green, blue);
       value = 144-i+30-1;
@@ -132,8 +135,8 @@ void loop() {
       Serial.print("//");
       Serial.println(value,DEC);  
       showLEDs(33);
+      }
     }
-    
 
     for(int i = 148; i > 0; i-=2 ) {
       setPixel(1, i, red, green, blue);
@@ -149,6 +152,7 @@ void showLEDs(int delayI) {
   showStrip();
   delay(delayI);
 }
+
 
 
 #define FadeMAXVALUE 500
@@ -301,4 +305,19 @@ void setPixel(uint8_t field, uint8_t Pixel, byte red, byte green, byte blue) {
      p[Pixel].b = 0; 
   }
  #endif
+}
+
+void setPixelPerc(uint8_t arrayNum, uint8_t ledNum, byte redP, byte greenP, byte blueP, float perc) {
+  float r = (float)redP*perc ;
+  float g = (float)greenP*perc ;
+  float b = (float)blueP*perc ;
+  lcd.setCursor(0,0);
+  lcd.print(r); 
+  lcd.setCursor(0,1);
+  lcd.print(g); 
+  lcd.setCursor(0,2);
+  lcd.print(b); 
+  delay(50);
+  setPixel(arrayNum, ledNum, (byte)r, (byte)g, (byte)b);
+  showLEDs(33);
 }
