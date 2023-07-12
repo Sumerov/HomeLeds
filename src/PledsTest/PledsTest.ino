@@ -41,14 +41,16 @@ void setup() {
   controllers[2] = &FastLED.addLeds<WS2812B, 10, GRB>(ledsMon, NUM_LEDS_MON).setCorrection( TypicalLEDStrip );
   controllers[3] = &FastLED.addLeds<WS2812B, 9, GRB>(ledsRight, NUM_LEDS_RIGHT).setCorrection( TypicalLEDStrip );
   FastLED.setBrightness(  brightness  );
-  delay(500);
+  //delay(500);
   AnToLedsOn[2] = true;
-  for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
-        setPixel(2, i, 255, 0, 0);     
+  for(uint8_t j = 1; j < 100; j++ ) {
+    for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
+          setPixel(2, i, (byte)j*255/99.0, 0, 0);     
+    }
+    showLEDs(3);
   }
-  showLEDs(33);
     
-  delay(45000);
+  delay(50000);
   Serial.begin(9600);
   lcd.init(); 
   lcd.noBacklight();
@@ -110,11 +112,20 @@ void loop() {
   byte red = 255;
   byte green = 160;
   byte blue = 40;
-
+  
+  for(int j = 98; j >= 0; j-- ) {
     for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
-        setPixel(2, i, red, green, blue);     
+        setPixel(2, i, (byte)j*255/98.0, 0, 0);    
+    }
+    showLEDs(3); 
   }
-  showLEDs(33);
+
+  for(uint8_t j = 0; j < 100; j++ ) {
+    for(uint8_t i = 0; i < NUM_LEDS_MON; i++ ) {
+          setPixel(2, i, (byte)j*red/100.0, (byte)j*green/100.0, (byte)j*blue/100.0);     
+    }
+    showLEDs(3);
+  }
     
     for(uint8_t i = 0; i < 30; i++ ) {
         setPixel(0, i, red, green, blue);
@@ -141,8 +152,10 @@ void loop() {
       showLEDs(33);
     }
 
-  
-  delay(50000); 
+  for(uint8_t i = 0; i < 240; i++ ) delay(50000); 
+  AnToLedsOnOld[0]=true;
+  AnToLedsOnOld[1]=true;
+  AnToLedsOnOld[2]=true;
 }
 
 void showLEDs(int delayI) {
