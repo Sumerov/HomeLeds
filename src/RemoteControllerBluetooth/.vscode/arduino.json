@@ -1,0 +1,8 @@
+{
+    "sketch": "RemoteControllerBluetooth.ino",
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328old",
+    "programmer": "avrispmkii",
+    "output": "../build",
+    "port": "COM6"
+}
