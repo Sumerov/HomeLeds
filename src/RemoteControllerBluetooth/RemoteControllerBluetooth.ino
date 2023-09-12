@@ -66,13 +66,13 @@ void setup() {
 	digitalWrite(HC05EN, HIGH);
     //Serial.begin(9600);  /*Baud rate UART communication */
     bluetooth.begin(9600);
-	bluetooth.println("---------------------------------------------------------");
+	/*bluetooth.println("---------------------------------------------------------");
   	bluetooth.println("Lachtrup box - CAN exersizer");
   	bluetooth.println("Bluetooth remote control");
   	bluetooth.println("Created by J. Retych");
   	bluetooth.println("---------------------------------------------------------");
   	bluetooth.println("for help, please send letter: h");
-  	bluetooth.println("---------------------------------------------------------");
+  	bluetooth.println("---------------------------------------------------------");*/
     if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { /*I2C Address at which OLED will communicate*/
         Serial.println(F("SSD1306 allocation failed"));
         for(;;);
@@ -111,16 +111,33 @@ void printButtonsState() {
 
 	}
 }
+char BLcodes[] = {'0','1','2','3','4','5','6','7','8','9','a','b','c'};
 
 void loop() {
-	readButtonsState();
-	printButtonsState();
+	display.clearDisplay();
+	display.setTextSize(2);
+	display.setTextColor(WHITE);
+	display.setCursor(0,0);
+	display.print("hello");
+	display.print(bluetooth.available());
+	display.display();	
+	//readButtonsState();
+	//printButtonsState();
     byte BluetoothData;
-        //bluetooth.print("read: "); 
     if (bluetooth.available() > 0) {
         BluetoothData=bluetooth.read();
-        bluetooth.print("read: ");   
-        bluetooth.println(BluetoothData);
+		//Serial.write(BluetoothData);
     }
-    delay(100);
+
+	for(uint8_t i=0;i<13; i++) {
+		bluetooth.write(BLcodes[i]);	
+		display.clearDisplay();
+		display.setTextSize(2);
+		display.setTextColor(WHITE);
+		display.setCursor(0,0);
+		display.print(i);
+		display.display();		
+		delay(500);
+	}
+	delay(5000);
 }

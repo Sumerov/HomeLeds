@@ -1,5 +1,5 @@
 #include <FastLED.h>
-#define NUM_LEDS 62
+#define NUM_LEDS 122
 #define echoPin 2 // attach pin D2 Arduino to pin Echo of HC-SR04
 #define trigPin 3 //attach pin D3 Arduino to pin Trig of HC-SR04
 
@@ -7,12 +7,14 @@
 long duration; // variable for the duration of sound wave travel
 int distance; // variable for the distance measurement
 
-int brightness = 235;
+
+int brightness = 255;
 int distanceGlobal = 6;
 bool buttonStatus = false;
 bool blinkWarning = false;
 bool LEDon = false;
 CRGB warmColor = CRGB(255,200,100);
+//CRGB warmColor1Row = CRGB(255*0.8,200,100);
 
 CRGB leds[NUM_LEDS];
 void setup() { 
@@ -142,7 +144,7 @@ void lightToogle() {
 }
   
 void loop() {
-  if(checkForContact()) {
+  if(checkForContact2()) {
     //leds[0] = CRGB::Green;
     lightToogle();
     delay(1000);
