@@ -89,7 +89,7 @@ bool checkForContact2() {
   bool statusRead = digitalRead(8);
   if(buttonStatus != statusRead) {
     buttonStatus = statusRead;
-    if(!LEDon) return true; 
+    if(LEDon != statusRead) return true; 
   } else if(!statusRead) {
     // Clears the trigPin condition
     digitalWrite(trigPin, LOW);
@@ -126,13 +126,13 @@ void lightToogle() {
    if(!LEDon) {
       for(int i=1;i<NUM_LEDS; i++) {
         leds[i] = warmColor;
-        showAll(10);
+        showAll(8);
       }  
       LEDon = true;
    } else {
     for(int i=1;i<NUM_LEDS; i++) {
         leds[i] = CRGB(0,0,0); 
-        showAll(10);
+        showAll(8);
       }
       LEDon = false;
    }
@@ -150,7 +150,7 @@ void loop() {
     delay(1000);
   } else {
     //leds[0] = CRGB::Red; 
-    showAll(30);
+    //showAll(30);
   }
   delay(100);
 }
